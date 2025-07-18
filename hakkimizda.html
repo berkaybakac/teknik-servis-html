@@ -2,95 +2,177 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hakkımızda - Teknik Servis</title>
     <meta
       name="description"
-      content="Teknik Servis hakkında bilgi edinin. Profesyonel kadromuzla garantisi bitmiş cihazlar için hızlı ve güvenilir teknik destek sunuyoruz."
-    />
-    <meta
-      name="keywords"
-      content="teknik servis, beyaz eşya, hakkımızda, uzman ekip, hizmet kalitesi"
+      content="Teknik Servis hakkında detaylı bilgi edinin. Profesyonel ekibimiz ve vizyonumuz burada."
     />
     <style>
       body {
-        margin: 0;
         font-family: sans-serif;
-        background: #111;
-        color: #eee;
+        margin: 0;
+        padding: 0;
       }
       header,
       footer {
-        background: #000;
+        background: #0a0a0a;
+        color: #fff;
         padding: 1rem;
-        text-align: center;
       }
-      nav a {
-        color: #eee;
-        margin: 0 0.5rem;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+      .menu a {
+        color: #fff;
         text-decoration: none;
+      }
+      .dropdown {
+        display: none;
+        flex-direction: column;
+        padding-left: 1rem;
+      }
+      .dropdown a {
         font-size: 0.9rem;
       }
-      .section {
-        padding: 1.5rem 1rem;
-      }
-      h1 {
-        text-align: center;
+      .hamburger {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
       }
-      .content {
-        background: #222;
-        padding: 1rem;
-        border-radius: 6px;
-        font-size: 0.95rem;
-        line-height: 1.6;
+      .btn-call {
+        background: #10b981;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: inline-block;
       }
-      .footer-note {
-        font-size: 0.7rem;
-        color: #888;
-        margin-top: 1rem;
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      footer a {
+        color: #ccc;
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+      @media (min-width: 640px) {
+        .menu {
+          display: flex !important;
+          flex-direction: row;
+          gap: 1rem;
+        }
+        .dropdown {
+          position: absolute;
+          background: #111;
+          display: none;
+          top: 60px;
+          padding: 0.5rem 1rem;
+        }
+        .menu-item:hover .dropdown {
+          display: flex;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <h2>Teknik Servis</h2>
       <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="hizmetler.html">Hizmetler</a>
+        <a href="index.html" style="color: #fff; font-weight: bold"
+          >Teknik Servis</a
+        >
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </nav>
+      <div class="menu" id="menu">
+        <a href="index.html">Ana Sayfa</a>
+        <div class="menu-item">
+          <a href="#">Hizmetlerimiz ⌄</a>
+          <div class="dropdown">
+            <a href="hizmet.html?service=Beyaz+Eşya+Servisi"
+              >Beyaz Eşya Servisi</a
+            >
+            <a href="hizmet.html?service=Buzdolabı">Buzdolabı</a>
+            <a href="hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a>
+            <a href="hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a>
+            <a href="hizmet.html?service=Fırın">Fırın</a>
+            <a href="hizmet.html?service=Klima">Klima</a>
+            <a href="hizmet.html?service=Kombi">Kombi</a>
+            <a href="hizmet.html?service=Televizyon">Televizyon</a>
+          </div>
+        </div>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="iletisim.html">İletişim</a>
+        <a href="gizlilik.html">Gizlilik Politikası</a>
         <a href="kvkk.html">KVKK</a>
-      </nav>
+        <a href="tel:+905554443322" class="btn-call">📞 Hemen Ara</a>
+      </div>
     </header>
 
-    <main class="section">
+    <main style="padding: 1rem">
       <h1>Hakkımızda</h1>
-      <div class="content">
-        Teknik Servis, garantisi sona ermiş beyaz eşya cihazlarınız için hızlı,
-        ekonomik ve güvenilir teknik destek hizmeti sunar. Müşteri memnuniyetini
-        ön planda tutan anlayışımızla, ev aletlerinizin uzun ömürlü ve verimli
-        çalışmasını sağlamak için çalışıyoruz. Profesyonel ekiplerimiz,
-        buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi ve
-        televizyon gibi birçok cihazın bakım, onarım ve montaj işlemlerinde
-        uzmanlaşmıştır. Mobil odaklı servis yapımız sayesinde, İstanbul
-        genelinde aynı gün içinde servis sağlayabiliyoruz. Yetkili servis
-        değiliz. Bu nedenle hizmetlerimiz sadece garanti süresi dolmuş cihazlara
-        yöneliktir. Orijinal yedek parçalar, uygun fiyat politikası ve deneyimli
-        teknisyenlerimizle sizlere değer katmak için buradayız. Her servis
-        öncesi cihazı analiz eder, şeffaf fiyatlandırma sunarız. Hizmet sonrası
-        da destek veririz. Amacımız sadece arızayı gidermek değil, sizlere uzun
-        vadeli güven kazandırmaktır.
-      </div>
+      <p>
+        Teknik Servis olarak yılların verdiği deneyimle müşterilerimize
+        güvenilir, hızlı ve garantili teknik servis hizmeti sunuyoruz.
+      </p>
+      <p>
+        Alanında uzman ekiplerimizle tüm beyaz eşya, klima, kombi ve
+        televizyonlar için bakım ve onarım hizmetleri veriyoruz.
+      </p>
+      <p>
+        Misyonumuz; her müşteriye özel, ekonomik ve kalıcı çözümler sunarak
+        sektörde fark yaratmaktır.
+      </p>
+      <a href="tel:+905554443322" class="btn-call">📞 Hemen Ara</a>
     </main>
 
     <footer>
-      <div>&copy; 2025 Teknik Servis. Tüm hakları saklıdır.</div>
-      <div class="footer-note">
-        Bu web sitesi resmi yetkili servis değildir. Yalnızca garantisi sona
-        ermiş cihazlar için destek sunar.
-      </div>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li>
+          <a href="hizmet.html?service=Beyaz+Eşya+Servisi"
+            >Beyaz Eşya Servisi</a
+          >
+        </li>
+        <li><a href="hizmet.html?service=Buzdolabı">Buzdolabı</a></li>
+        <li>
+          <a href="hizmet.html?service=Çamaşır+Makinesi">Çamaşır Makinesi</a>
+        </li>
+        <li>
+          <a href="hizmet.html?service=Bulaşık+Makinesi">Bulaşık Makinesi</a>
+        </li>
+        <li><a href="hizmet.html?service=Fırın">Fırın</a></li>
+        <li><a href="hizmet.html?service=Klima">Klima</a></li>
+        <li><a href="hizmet.html?service=Kombi">Kombi</a></li>
+        <li><a href="hizmet.html?service=Televizyon">Televizyon</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
+        <li><a href="kvkk.html">KVKK</a></li>
+        <li><a href="tel:+905554443322" class="btn-call">📞 Hemen Ara</a></li>
+      </ul>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
   </body>
 </html>
