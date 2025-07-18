@@ -21,15 +21,29 @@
       a { color: inherit; text-decoration: none; }
       header {
         background: #232733;
-        padding: 1.2rem 1rem 1rem 1rem;
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         position: sticky;
         top: 0;
         z-index: 10;
+        height: 64px;
       }
-      .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 0.5px; }
+      .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+      }
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 0;
+      }
       .menu-btn {
         font-size: 2rem;
         cursor: pointer;
@@ -38,38 +52,60 @@
         color: #fff;
         display: flex;
         align-items: center;
-        position: absolute;
-        right: 1.2rem;
-        top: 1.2rem;
+        margin-left: auto;
       }
-      /* Hamburger Menu Overlay */
+      /* Mobile-first, clean hamburger menu overlay */
       .menu-overlay {
         display: none;
         position: fixed;
         z-index: 1000;
-        left: 0; top: 0; right: 0; bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        max-width: 100vw;
         background: #232733;
         color: #fff;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        animation: fadeIn 0.2s;
+        box-sizing: border-box;
+        padding-top: 4rem;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        height: auto;
+        min-height: 0;
+        max-height: 90vh;
       }
       .menu-overlay.open {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .menu-content {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 0 2rem 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
       }
       .menu-overlay-header {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 2rem 2rem 1.2rem 2rem;
-      }
-      .menu-overlay .logo {
-        font-size: 1.3rem;
-        font-weight: bold;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding: 0;
+        margin-bottom: 1.2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 4rem;
+        padding-right: 1rem;
+        background: transparent;
       }
       .menu-close-btn {
         font-size: 2rem;
@@ -77,84 +113,75 @@
         border: none;
         color: #fff;
         cursor: pointer;
+        padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+        line-height: 1;
+        margin-right: 0;
       }
       .menu-list {
         width: 100%;
         margin: 0;
-        padding: 0 2rem;
+        padding: 0;
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
+        box-sizing: border-box;
       }
-      .menu-link, .menu-main {
+      .menu-link, .dropdown-toggle {
         font-size: 1.1rem;
         color: #fff;
         background: none;
         border: none;
         border-radius: 8px;
-        padding: 0.9rem 1rem;
+        padding: 0.9rem 0 0.9rem 1.2rem;
         text-align: left;
-        margin: 0.1rem 0;
+        margin: 0;
         cursor: pointer;
-        transition: background 0.2s, color 0.2s;
         outline: none;
-      }
-      .menu-main {
-        font-weight: 600;
-        background: #fff;
-        color: #232733;
-        margin-bottom: 1.5rem;
-      }
-      .menu-link:hover, .menu-main:hover {
-        background: #181c23;
-        color: #00e676;
-      }
-      .menu-section {
-        margin: 1.2rem 0 0.2rem 0;
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: #bdbdbd;
-        letter-spacing: 0.02em;
-        background: none;
-        border: none;
-        text-align: left;
-        cursor: default;
-        padding: 0.7rem 1rem 0.2rem 1rem;
-      }
-      .dropdown-toggle {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 1.1rem;
+      }
+      .menu-link:hover, .dropdown-toggle:hover {
+        color: #00e676;
+      }
+      .menu-link:active, .dropdown-toggle:active {
+        background: #181c23;
+        color: #00e676;
+      }
+      .dropdown-toggle {
         font-weight: 500;
-        padding: 0.9rem 1rem;
-        cursor: pointer;
-        border-radius: 8px;
-        transition: background 0.2s, color 0.2s;
+        position: relative;
+        align-items: center;
+        min-height: 2.2rem;
+        padding-right: 2.2rem;
       }
       .dropdown-toggle:after {
         content: "\25BC";
-        font-size: 0.9em;
-        margin-left: 0.7em;
-        transition: transform 0.2s;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right: 2.2rem;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
       }
       .dropdown-toggle.open:after {
-        transform: rotate(-180deg);
+        content: "\25B2";
+        margin-left: auto;
+        margin-right: 2.2rem;
       }
       .dropdown-menu {
         display: none;
         flex-direction: column;
         width: 100%;
         background: #232733;
-        margin: 0 0 0.5rem 0;
+        box-sizing: border-box;
+        margin: 0.7rem 0 0.5rem 0;
         padding: 0;
-        border-radius: 0 0 8px 8px;
-        animation: fadeIn 0.2s;
+        gap: 0.5rem;
       }
       .dropdown-menu.open {
         display: flex;
@@ -164,10 +191,16 @@
         color: #fff;
         border-radius: 0;
         font-size: 1.08rem;
-        padding: 0.7rem 1.5rem;
+        padding: 0.7rem 0 0.7rem 2rem;
         margin: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+        justify-content: flex-start;
       }
       .dropdown-menu .menu-link:hover {
+        color: #00e676;
+      }
+      .dropdown-menu .menu-link:active {
         background: #181c23;
         color: #00e676;
       }
@@ -187,9 +220,29 @@
         color: #00e676;
         background: none;
       }
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+      /* Overlay background for menu */
+      .menu-bg {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0; top: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.35);
+        width: 100vw;
+        height: 100vh;
+      }
+      .menu-bg.open {
+        display: block;
+      }
+      @media (max-width: 480px) {
+        .menu-content {
+          max-width: 100vw;
+        }
+        .menu-overlay {
+          max-width: 100vw;
+        }
+        .menu-overlay-header {
+          padding-right: 0.5rem;
+        }
       }
       main {
         max-width: 480px;
@@ -307,20 +360,36 @@
         margin-top: 2rem;
         border-radius: 0 0 16px 16px;
       }
+      /* Footer styles for 2-row, symmetric, white links with green hover */
       .footer-nav {
-        margin: 1.2rem 0 0.7rem 0;
-        font-size: 1rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.2rem;
+        gap: 0.7rem 1.2rem;
+        padding: 0.5rem 0 0.2rem 0;
+        font-size: 1rem;
+        color: #fff;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .footer-nav-row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.7rem 1.2rem;
+        margin-bottom: 0.2rem;
       }
       .footer-nav a {
         color: #fff;
-        opacity: 0.8;
-        transition: color 0.2s, opacity 0.2s;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0.2rem 0.3rem;
+        border-radius: 4px;
       }
-      .footer-nav a:hover { color: #00e676; opacity: 1; }
+      .footer-nav a:hover {
+        color: #00e676;
+      }
       .fixed-call {
         position: fixed;
         left: 0; right: 0; bottom: 1.2rem;
@@ -343,9 +412,11 @@
     <script>
       function openMenu() {
         document.getElementById('menu-overlay').classList.add('open');
+        document.getElementById('menu-bg').classList.add('open');
       }
       function closeMenu() {
         document.getElementById('menu-overlay').classList.remove('open');
+        document.getElementById('menu-bg').classList.remove('open');
       }
       function toggleDropdown() {
         var btn = document.getElementById('dropdown-toggle');
@@ -356,7 +427,8 @@
       // Menü dışında bir yere tıklanınca menüyü kapat
       document.addEventListener('click', function(e) {
         var overlay = document.getElementById('menu-overlay');
-        if (overlay.classList.contains('open') && !overlay.contains(e.target) && !e.target.classList.contains('menu-btn')) {
+        var bg = document.getElementById('menu-bg');
+        if ((overlay.classList.contains('open') || bg.classList.contains('open')) && !overlay.contains(e.target) && !e.target.classList.contains('menu-btn')) {
           closeMenu();
         }
       });
@@ -364,35 +436,37 @@
   </head>
   <body>
     <header>
-      <div class="logo">Teknik Servis</div>
+      <div class="logo"><a href="index.html">Teknik Servis</a></div>
       <button class="menu-btn" onclick="openMenu()" aria-label="Menüyü Aç/Kapat">☰</button>
     </header>
+    <div class="menu-bg" id="menu-bg"></div>
     <div class="menu-overlay" id="menu-overlay">
-      <div class="menu-overlay-header">
-        <span class="logo">Teknik Servis</span>
-        <button class="menu-close-btn" onclick="closeMenu()" aria-label="Menüyü Kapat">&times;</button>
+        <div class="menu-overlay-header">
+            <button class="menu-close-btn" onclick="closeMenu()" aria-label="Menüyü Kapat">&times;</button>
+        </div>
+        <div class="menu-content">
+          <ul class="menu-list">
+            <li><a href="index.html" class="menu-link">Ana Sayfa</a></li>
+            <li>
+              <button class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">Hizmetlerimiz</button>
+              <div class="dropdown-menu" id="dropdown-menu">
+                <a href="/hizmet?service=Beyaz+Eşya+Servisi" class="menu-link">Beyaz Eşya Servisi</a>
+                <a href="/hizmet?service=Buzdolabı" class="menu-link">Buzdolabı</a>
+                <a href="/hizmet?service=Çamaşır+Makinesi" class="menu-link">Çamaşır Makinesi</a>
+                <a href="/hizmet?service=Bulaşık+Makinesi" class="menu-link">Bulaşık Makinesi</a>
+                <a href="/hizmet?service=Fırın" class="menu-link">Fırın</a>
+                <a href="/hizmet?service=Klima" class="menu-link">Klima</a>
+                <a href="/hizmet?service=Kombi" class="menu-link">Kombi</a>
+                <a href="/hizmet?service=Televizyon" class="menu-link">Televizyon</a>
+              </div>
+            </li>
+            <li><a href="hakkimizda.html" class="menu-link">Hakkımızda</a></li>
+            <li><a href="iletisim.html" class="menu-link">İletişim</a></li>
+            <li><a href="gizlilik.html" class="menu-link">Gizlilik Politikası</a></li>
+            <li><a href="kvkk.html" class="menu-link">KVKK</a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="menu-list">
-        <li><a href="#" class="menu-main">Ana Sayfa</a></li>
-        <li>
-          <button class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">Hizmetlerimiz</button>
-          <div class="dropdown-menu" id="dropdown-menu">
-            <a href="beyaz-esya-servisi.html" class="menu-link">Beyaz Eşya Servisi</a>
-            <a href="buzdolabi-tamiri.html" class="menu-link">Buzdolabı Tamiri</a>
-            <a href="camasir-makinesi-servisi.html" class="menu-link">Çamaşır Makinesi Servisi</a>
-            <a href="bulasik-makinesi-servisi.html" class="menu-link">Bulaşık Makinesi Servisi</a>
-            <a href="firin-tamiri.html" class="menu-link">Fırın Tamiri</a>
-            <a href="klima-bakimi.html" class="menu-link">Klima Bakımı</a>
-            <a href="kombi-servisi.html" class="menu-link">Kombi Servisi</a>
-            <a href="televizyon-tamiri.html" class="menu-link">Televizyon Tamiri</a>
-          </div>
-        </li>
-        <li><a href="hakkimizda.html" class="menu-link">Hakkımızda</a></li>
-        <li><a href="iletisim.html" class="menu-link">İletişim</a></li>
-        <li><a href="gizlilik.html" class="menu-link">Gizlilik Politikası</a></li>
-        <li><a href="kvkk.html" class="menu-link">KVKK</a></li>
-      </ul>
-    </div>
     <main>
       <h1>Teknik Servis Hizmeti ve Beyaz Eşya Tamiri</h1>
       <p style="text-align:center; margin-bottom:1.5rem; max-width: 90%;">Beyaz eşyalarınız için güvenilir, hızlı ve profesyonel teknik servis hizmeti.</p>
@@ -430,12 +504,29 @@
       <p style="margin-bottom:1.5rem;">Teknik Servis olarak beyaz eşyalarınızın bakımı, tamiri ve kurulumu konusunda uzman teknik servis hizmeti sunuyoruz. Teknik servis ihtiyaçlarınızı en kısa sürede karşılıyor, cihazlarınızın performansını en üst seviyeye çıkarıyoruz.<br><br>Kombi, klima, çamaşır makinesi, bulaşık makinesi, buzdolabı ve diğer tüm ev eşyaları için hızlı ve garantili çözüm sağlıyoruz. Eğitimli teknisyen kadromuz, yüksek müşteri memnuniyetini hedefleyerek çalışmaktadır. Teknik servis sürecimiz şeffaf, güvenilir ve uygun fiyatlıdır.<br><br>Teknik servis alanında en çok tercih edilen firmalardan biri olarak, her zaman yanınızdayız. İhtiyacınız olan her an bize ulaşabilir ve servis talebinizi kolayca oluşturabilirsiniz. Teknik Servis, uzman teknik servis çözümlerinde doğru adrestir.</p>
     </main>
     <footer class="footer">
-      <div class="footer-nav">
-        <a href="#">Anasayfa</a>
-        <a href="#">Hizmetlerimiz</a>
-        <a href="#">Neden Biz?</a>
-        <a href="#">İletişim</a>
-      </div>
+      <nav class="footer-nav">
+        <div class="footer-nav-row">
+          <a href="index.html">Ana Sayfa</a>
+          <div class="footer-nav-row">
+          <span style="font-weight:600; color:#fff;">Hizmetlerimiz</span>
+          <div class="footer-nav-row">
+          <a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a>
+          <a href="/hizmet?service=Buzdolabı">Buzdolabı</a>
+          <a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a>
+          <a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a>
+          <a href="/hizmet?service=Fırın">Fırın</a>
+          <a href="/hizmet?service=Klima">Klima</a>
+          <a href="/hizmet?service=Kombi">Kombi</a>
+          <a href="/hizmet?service=Televizyon">Televizyon</a>
+          <div class="footer-nav-row">
+          <a href="hakkimizda.html">Hakkımızda</a>
+        </div>
+        <div class="footer-nav-row">
+          <a href="iletisim.html">İletişim</a>
+          <a href="gizlilik.html">Gizlilik Politikası</a>
+          <a href="kvkk.html">KVKK</a>
+        </div>
+      </nav>
       <p style="margin-top:1.2rem; font-size:0.98rem; color:#bdbdbd;">&copy; 2025 Teknik Servis. Tüm hakları saklıdır.</p>
       <p style="font-size:0.92rem; color:#bdbdbd;">Bu web sitesi resmi yetkili servis değildir. Yalnızca garantisi sona ermiş cihazlara teknik servis hizmeti sunulmaktadır.</p>
     </footer>
