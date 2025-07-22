@@ -2,136 +2,1243 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KVKK ve Gizlilik Politikası - Teknik Servis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KVKK Aydınlatma Metni - Beyaz Eşya ve Elektronik Cihaz Tamiri</title>
     <meta
       name="description"
-      content="Teknik Servis KVKK ve gizlilik politikası. Kişisel verilerin korunması ve kullanıcı gizliliği hakkında bilgi edinin."
+      content="Firmamız web sitesi üzerinden kişisel veri toplamaz. KVKK Aydınlatma Metni ve kişisel verilerinizin korunması hakkında bilgi alın."
     />
     <meta
       name="keywords"
-      content="kvkk, gizlilik, veri koruma, çerez politikası, kişisel veri"
+      content="kvkk, kişisel verilerin korunması, veri işleme politikası, beyaz eşya servisi kvkk, veri toplama, gizlilik"
     />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "KVKK ve Gizlilik Politikası",
-        "description": "Teknik Servis kullanıcı gizliliğini ve kişisel veri koruma haklarını önemser. KVKK ve gizlilik politikamız hakkında bilgi edinin.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Teknik Servis"
-        }
-      }
-    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
     <style>
-      body {
+      /* Genel Ayarlar */
+      * {
         margin: 0;
-        font-family: sans-serif;
-        background: #111;
-        color: #eee;
+        padding: 0;
+        box-sizing: border-box;
       }
-      header,
-      footer {
-        background: #000;
-        padding: 1rem;
-        text-align: center;
+
+      :root {
+        --primary-color: #009e3c;
+        --secondary-color: #007a36;
+        --accent-color: #e68900;
+        --text-color: #fff;
+        --light-bg: #111;
+        --border-color: #222;
+        --footer-bg: #0d0d0d; /* Index.html ile uyumlu */
+        --footer-text: #fff;
+        --dark-card-bg: #1a1a1a;
       }
-      nav a {
-        color: #eee;
-        margin: 0 0.5rem;
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #000;
+        font-size: 16px;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a,
+      a:visited {
+        color: var(--primary-color);
         text-decoration: none;
-        font-size: 0.9rem;
+        transition: color 0.2s;
       }
-      .section {
-        padding: 1.5rem 1rem;
+
+      a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
       }
+
+      /* Tipografi */
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        color: var(--text-color);
+      }
+
       h1 {
-        text-align: center;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.75rem;
+      }
+      p {
         margin-bottom: 1rem;
       }
-      .content {
-        background: #222;
-        padding: 1rem;
-        border-radius: 6px;
-        font-size: 0.95rem;
-        line-height: 1.6;
+
+      /* Header ve Navigasyon */
+      header {
+        background-color: #000;
+        box-shadow: none;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
-      .faq {
-        margin-top: 2rem;
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
       }
-      .faq h2 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
+
+      .logo a {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
       }
-      .faq p {
-        font-size: 0.9rem;
-        margin: 0.5rem 0;
+
+      .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 5px;
       }
-      .footer-note {
-        font-size: 0.7rem;
+
+      .main-nav a {
+        display: block;
+        padding: 10px 15px;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: background-color 0.2s, color 0.2s;
+        color: #fff;
+      }
+
+      .main-nav a:hover {
+        background-color: var(--light-bg);
+        color: #fff;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .mobile-nav-toggle {
+        display: none;
+      }
+
+      /* Sayfa Başlığı ve Breadcrumb */
+      .page-header {
+        background-color: #000;
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .page-header h1 {
+        color: #fff;
+      }
+      .page-header p {
+        color: #bbb;
+      }
+
+      .breadcrumb-container {
+        padding: 15px 0;
+        background-color: #000;
+      }
+      .breadcrumb {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+        color: #ddd;
+        justify-content: center;
+      }
+      .breadcrumb-item a {
+        color: #fff;
+      }
+      .breadcrumb-item.active {
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+      .breadcrumb-separator {
+        margin: 0 10px;
         color: #888;
-        margin-top: 1rem;
+      }
+
+      /* İçerik Sayfası Stilleri */
+      .content-section {
+        padding: 50px 0;
+      }
+      .content-article {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 20px;
+        background: var(--dark-card-bg);
+        border: 1px solid #333;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .content-article h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+      .content-article h2 {
+        font-size: 1.6rem;
+        color: #fff;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border-color);
+      }
+      .content-article p {
+        color: #ddd;
+        margin-bottom: 1rem;
+      }
+      .content-article ul {
+        list-style-type: disc;
+        padding-left: 25px;
+        margin-bottom: 1.5rem;
+        color: #ddd;
+      }
+      .content-article li {
+        margin-bottom: 0.75rem;
+      }
+      .content-article em {
+        display: block;
+        text-align: right;
+        color: #bbb;
+        margin-top: 2rem;
+        font-size: 0.9em;
+      }
+
+      /* Sosyal Medya Paylaşım Stilleri */
+      .social-share {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        justify-content: center;
+      }
+      .social-share span {
+        font-weight: 500;
+        color: #fff;
+      }
+      .social-share a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        transition: color 0.2s;
+      }
+      .social-share a:hover {
+        color: var(--primary-color);
+      }
+      .social-share svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--footer-bg);
+        color: var(--footer-text);
+        padding: 50px 0 20px;
+        position: relative;
+        padding-bottom: 120px; /* Sticky CTA için yeterli boşluk */
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #fff;
+        position: relative;
+      }
+
+      .footer-column h3::after {
+        display: none;
+        background: none;
+        content: none;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column a {
+        color: var(--footer-text);
+        opacity: 0.8;
+        transition: opacity 0.2s;
+      }
+
+      .footer-column a:hover {
+        opacity: 1;
+        color: var(--accent-color);
+        text-decoration: underline;
+      }
+
+      .footer-column p {
+        opacity: 0.8;
+      }
+
+      /* Footer ikon boyutu */
+      footer .footer-column svg {
+        width: 1.2em;
+        height: 1.2em;
+        min-width: 1.2em;
+        min-height: 1.2em;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        vertical-align: middle;
+        margin-right: 8px;
+        fill: var(--accent-color);
+      }
+
+      #footer-disclaimer {
+        text-align: center;
+        background: #1e1e23; /* Index.html ile uyumlu */
+        color: #fff;
+        font-size: 0.9em;
+        padding: 15px;
+        border-radius: 4px;
+        border: none; /* Index.html ile uyumlu */
+        margin-top: 30px;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 30px;
+        border-top: 1px solid #222; /* Index.html ile uyumlu */
+        font-size: 0.9em;
+        color: var(--footer-text);
+        opacity: 0.7;
+      }
+
+      .copyright a {
+        color: var(--footer-text);
+        font-weight: bold;
+      }
+
+      .copyright a:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
+      }
+
+      /* Yardımcı Sınıflar */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .mb-2 {
+        margin-bottom: 1rem;
+      }
+
+      /* Mobil Uyumluluk */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+        .mobile-nav-toggle {
+          display: block;
+          background: none;
+          border: none;
+          font-size: 28px;
+          cursor: pointer;
+          color: #fff;
+        }
+        .main-nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: #000;
+          border-top: 1px solid var(--border-color);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .main-nav.show {
+          display: block;
+        }
+        .main-nav ul {
+          flex-direction: column;
+          padding: 10px;
+        }
+        .dropdown:hover .dropdown-content {
+          display: none;
+        }
+        .dropdown.open .dropdown-content {
+          display: block;
+          position: static;
+          box-shadow: none;
+          border: none;
+        }
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-column h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .content-article {
+          padding: 15px;
+        }
+        .content-article h1 {
+          font-size: 1.8rem;
+        }
+        .content-article h2 {
+          font-size: 1.4rem;
+        }
+      }
+
+      /* Sticky Call CTA */
+      .sticky-call-cta {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        z-index: 9999;
+        background: #009540;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.3rem;
+        border-radius: 999px;
+        padding: 0.9em 1.5em 0.9em 1.3em;
+        display: flex;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        transition: background 0.18s, box-shadow 0.18s, transform 0.1s;
+        text-decoration: none;
+        outline: none;
+        gap: 0.6em;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .sticky-call-cta span {
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        font-size: 1.15em;
+      }
+      .sticky-call-cta svg {
+        flex-shrink: 0;
+        color: #fff;
+      }
+      .sticky-call-cta:hover,
+      .sticky-call-cta:focus {
+        background: #007a36;
+        text-decoration: none;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.13);
+        transform: translateX(-50%) scale(1.03);
+      }
+      @media (max-width: 600px) {
+        .sticky-call-cta {
+          font-size: 1rem;
+          padding: 0.6em 0.9em 0.6em 0.8em;
+          bottom: 15px;
+        }
+        .sticky-call-cta span {
+          font-size: 1em;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Şirket Bilgileri -->
+    <script id="company-data" type="application/json">
+      {
+        "name": "Teknik Servis",
+        "sirketAdi": "Teknik Servis A.Ş.",
+        "phone": "0850 123 45 67",
+        "email": "example@gmail.com",
+        "url": "https://exampleteknikservis.com",
+        "adres": "Mersin, Türkiye",
+        "vergiNo": "1234567890"
+      }
+    </script>
+
+    <!-- Header -->
     <header>
-      <h2>Teknik Servis</h2>
-      <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="hizmetler.html">Hizmetler</a>
-        <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="iletisim.html">İletişim</a>
-        <a href="kvkk.html">KVKK</a>
-      </nav>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a
+              href="index.html"
+              id="company-name"
+              aria-label="Anasayfa - Beyaz Eşya Servisi"
+              >Beyaz Eşya Servisi</a
+            >
+          </div>
+          <button
+            class="mobile-nav-toggle"
+            aria-label="Mobil menüyü aç"
+            title="Mobil menüyü aç"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              style="
+                width: 1em;
+                height: 1em;
+                vertical-align: middle;
+                fill: currentColor;
+              "
+            >
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              ></path>
+            </svg>
+          </button>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li class="dropdown">
+                <a href="#" id="nav-hizmetlerimiz">Hizmetlerimiz</a>
+                <div class="dropdown-content">
+                  <a href="/hizmet/Beyaz-Eşya-Servisi.html"
+                    >Beyaz Eşya Servisi</a
+                  >
+                  <a href="/hizmet/Buzdolabı-Tamiri.html">Buzdolabı</a>
+                  <a href="/hizmet/Çamaşır-Makinesi.html">Çamaşır Makinesi</a>
+                  <a href="/hizmet/Bulaşık-Makinesi.html">Bulaşık Makinesi</a>
+                  <a href="/hizmet/Fırın-Tamiri.html">Fırın</a>
+                  <a href="/hizmet/Klima.html">Klima</a>
+                  <a href="/hizmet/Kombi.html">Kombi</a>
+                  <a href="/hizmet/Televizyon.html">Televizyon</a>
+                </div>
+              </li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <main class="section">
-      <h1>KVKK ve Gizlilik Politikası</h1>
-      <div class="content">
-        Teknik Servis olarak, kişisel verilerinizin güvenliği bizim için
-        önceliklidir. Bu politika, 6698 sayılı Kişisel Verilerin Korunması
-        Kanunu (“KVKK”) kapsamında, kullanıcılarımızın gizliliğini korumak
-        amacıyla hazırlanmıştır. Web sitemizi ziyaret ettiğinizde ad, soyad,
-        telefon numarası gibi bilgiler sadece servis taleplerinizin karşılanması
-        için kullanılır ve 3. şahıslarla paylaşılmaz. Tarayıcınız üzerinden
-        tarafımıza iletilen teknik bilgiler (IP adresi, cihaz tipi vs.) sistem
-        güvenliğini sağlamak ve kullanıcı deneyimini iyileştirmek için anonim
-        olarak analiz edilebilir. Ziyaretçilerin site kullanım alışkanlıkları
-        Google Analytics gibi araçlarla anonim olarak takip edilebilir. Bu
-        veriler, yalnızca istatistiksel analiz içindir.
+    <div class="page-header">
+      <h1>Kişisel Verilerin Korunması Kanunu (KVKK) Politikası</h1>
+    </div>
 
-        <div class="faq">
-          <h2>Sıkça Sorulan KVKK Soruları</h2>
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+          <li class="breadcrumb-separator">&gt;</li>
+          <li class="breadcrumb-item active" aria-current="page">
+            KVKK Aydınlatma Metni
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <div class="container">
+        <article class="content-article">
+          <h1>Kişisel Verilerin Korunması Kanunu (KVKK) Politikası</h1>
           <p>
-            <strong>Soru:</strong> Verilerim üçüncü kişilerle paylaşılır mı?<br />
-            <strong>Cevap:</strong> Hayır. Verileriniz yalnızca yasal
-            zorunluluklar kapsamında resmi mercilere iletilebilir.
+            Teknik Servis olarak, Kişisel Verilerin Korunması Kanunu (KVKK)
+            kapsamında, kişisel verilerinizin gizliliğine ve güvenliğine büyük
+            önem vermekteyiz. Bu politika, veri sorumlusu sıfatıyla kişisel
+            verilerinizi nasıl topladığımızı, işlediğimizi, sakladığımızı,
+            aktardığımızı ve ilgili haklarınızı açıklamaktadır.
           </p>
 
+          <h2>Veri İşleme Politikamız</h2>
           <p>
-            <strong>Soru:</strong> Verilerim nasıl saklanıyor?<br />
-            <strong>Cevap:</strong> Verileriniz şifrelenmiş sistemlerde ve
-            güvenli sunucularda tutulur.
+            Firmamız, hiçbir şekilde web sitesi üzerinden kişisel veri
+            toplamamaktadır. Sitemiz sadece bilgilendirme amaçlıdır ve
+            kullanıcıdan ad, soyad, e-posta adresi, telefon numarası veya konum
+            gibi herhangi bir kişisel bilgi talep etmemektedir.
+          </p>
+          <p>
+            Sadece telefonla arayan müşterilerin kişisel verileri (telefon
+            numarası) hizmet sunumu ve müşteri kaydı amacıyla kaydedilmektedir.
+            Bu kayıtlar üçüncü kişilerle paylaşılmaz ve yasal zorunluluklar
+            dışında başka bir amaçla kullanılmaz.
+          </p>
+          <p>
+            KVKK kapsamındaki haklarınız ve talepleriniz için bize
+            <a href="mailto:example@gmail.com" id="kvkk-contact-email"
+              >example@gmail.com</a
+            >
+            adresinden ulaşabilirsiniz.
           </p>
 
+          <h2>Kişisel Verilerin Korunması Politikası</h2>
           <p>
-            <strong>Soru:</strong> Çerez (cookie) kullanıyor musunuz?<br />
-            <strong>Cevap:</strong> Evet, kullanıcı deneyimini geliştirmek
-            amacıyla temel düzeyde çerez kullanmaktayız.
+            İşbu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması
+            Kanunu ("KVKK") kapsamında hazırlanmıştır. Web sitemizi ziyaret
+            ettiğinizde herhangi bir kişisel veriniz tarafımızca toplanmamakta,
+            işlenmemekte ve üçüncü kişilerle paylaşılmamaktadır. Gizliliğinize
+            önem veriyor, KVKK kapsamında yükümlülüklerimizin bilincinde olarak
+            veri güvenliğinizi önemsiyoruz. İleride kişisel veri toplanması
+            durumu söz konusu olursa, bu konuda ayrıca açık rıza talep edilecek
+            ve gerekli bilgilendirme yapılacaktır. Detaylı bilgi için bizimle
+            iletişime geçebilirsiniz.
+          </p>
+
+          <h2>Gizliliğe Yaklaşımımız</h2>
+          <p>
+            KVKK kapsamında bireylerin veri güvenliği temel bir haktır. Biz de
+            bu hakkı gözeterek, herhangi bir veri toplama faaliyeti
+            gerçekleştirmiyor, kullanıcı mahremiyetini öncelikli olarak
+            değerlendiriyoruz. Gizliliğinizin tamamen korunduğundan emin
+            olabilirsiniz. Ancak ileride hizmet kapsamımızda değişiklik olur ve
+            kişisel veri toplanması söz konusu olursa, bu durumda sizden açık
+            rızanız alınacak, hangi verilerin neden toplandığı şeffaf bir
+            şekilde belirtilecek ve gerekli aydınlatma metinleri
+            yayımlanacaktır.
+          </p>
+
+          <h2>Hangi Veriler Toplanmaz?</h2>
+          <p>
+            Web sitemiz tamamen bilgilendirme amacıyla tasarlanmıştır. Bu
+            nedenle sizden ad, soyad, e-posta adresi, telefon numarası, konum
+            bilgisi, IP adresi ya da herhangi bir kişisel bilgi talep
+            edilmemektedir. Herhangi bir form, üyelik alanı veya kullanıcıdan
+            bilgi alınan bir yapı bulunmamaktadır. Site kullanımı sırasında
+            sizden bir veri istenmediği gibi, çerezler (cookies) aracılığıyla da
+            kişisel verileriniz izlenmemektedir.
+          </p>
+
+          <h2>Çerez (Cookie) Kullanımı</h2>
+          <p>
+            Sitemizde kişisel veri içeren veya sizi takip eden çerezler
+            kullanılmamaktadır. Eğer gelecekte kullanıcı deneyimini iyileştirme
+            amacıyla çerez kullanımı gerekirse, bu durumda çerez politikamız
+            güncellenecek ve sizden rıza alınacaktır. Halihazırda, tüm çerezler
+            sadece teknik performansı ölçümlemeye yöneliktir ve kimlik
+            tanımlayıcı bilgi içermez.
+          </p>
+
+          <h2>Güvenlik Önlemleri</h2>
+          <p>
+            Her ne kadar kişisel veri toplamasak da, web sitemizin güvenliğini
+            titizlikle sağlamaktayız. Yazılım altyapımız, düzenli olarak
+            güncellenmekte, olası siber tehditlere karşı önlemler alınmakta ve
+            dış müdahalelere karşı korunmaktadır.
+          </p>
+          <ul>
+            <li>Sunucu güvenliği sağlanmaktadır.</li>
+            <li>SSL sertifikası ile şifreli bağlantı sunulmaktadır.</li>
+            <li>Yetkisiz erişim engellenmektedir.</li>
+            <li>Zararlı trafik ve bot taramaları analiz edilmektedir.</li>
+          </ul>
+          <p>
+            Kullanıcı gizliliğini sağlamak, yalnızca bir yasal yükümlülük değil,
+            aynı zamanda firmamızın kullanıcıya olan saygısının ve güveninin bir
+            göstergesidir.
+          </p>
+
+          <h2>KVKK Kapsamında Haklarınız</h2>
+          <p>
+            Herhangi bir kişisel veriniz toplanmıyor olsa da, KVKK size şu
+            hakları tanımaktadır:
+          </p>
+          <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme.</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme.</li>
+            <li>Verilerin hangi amaçla işlendiğini öğrenme.</li>
+            <li>
+              Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme.
+            </li>
+            <li>Yanlış veya eksik işlenmişse düzeltilmesini isteme.</li>
+            <li>
+              İşlenmesini gerektiren sebeplerin ortadan kalkması halinde
+              silinmesini ya da yok edilmesini talep etme.
+            </li>
+            <li>
+              Aktarıldığı üçüncü kişilere eksik veya yanlış verilerin
+              bildirilmesini isteme.
+            </li>
+            <li>
+              İşlemenin yalnızca otomatik sistemler ile analiz edilmesi sonucu
+              aleyhinize bir sonucun ortaya çıkmasına itiraz etme.
+            </li>
+            <li>
+              Kanuna aykırı bir işlem nedeniyle zarara uğramanız halinde zararın
+              giderilmesini talep etme.
+            </li>
+          </ul>
+          <p>
+            Bu haklara ilişkin taleplerinizi bize her zaman iletebilir, detaylı
+            bilgi almak için bizimle iletişime geçebilirsiniz.
+          </p>
+
+          <h2>Kullanıcı Güvenine Verdiğimiz Önem</h2>
+          <p>
+            Web sitemizi ziyaret eden herkesin gönül rahatlığıyla dolaşabilmesi
+            için çalışıyoruz. Kapsamlı, sade ve kullanıcı dostu içerikler
+            üretirken; veri gizliliği ilkelerinden asla taviz vermiyoruz. Hizmet
+            anlayışımız; şeffaflık, güvenilirlik ve erişilebilirlik üzerine
+            kuruludur. Kullanıcılarımızın bize duyduğu güven, sunduğumuz dijital
+            deneyimin en önemli yapı taşlarından biridir.
+          </p>
+
+          <h2>Gelecekteki Hizmet Kapsamı ve Rıza Süreci</h2>
+          <p>
+            Gelecekte hizmet kapsamımız genişlerse ve kullanıcıya özel hizmet
+            sunmak amacıyla veri toplama ihtiyacı doğarsa, bu süreç tamamen KVKK
+            hükümlerine uygun bir şekilde yürütülecektir. Bu durumda
+            kullanıcıdan açık rıza alınmadan hiçbir veri toplanmayacak ve ilgili
+            bilgilendirme metinleri ile tüm süreç şeffaf biçimde yönetilecektir.
+          </p>
+          <p>
+            Ancak şu anda ve öngörülebilir gelecekte, kişisel veri toplamayı
+            planlamadığımızı belirtmek isteriz. Web sitemiz, kullanıcıdan bilgi
+            almak yerine sadece güvenli ve tarafsız bilgilendirme yapmayı
+            hedeflemektedir.
+          </p>
+
+          <h2>İletişim</h2>
+          <p>
+            Gizlilik politikamızla ilgili her türlü soru, görüş ya da
+            talepleriniz için bizimle iletişime geçebilirsiniz. Tarafsız ve
+            hızlı şekilde size dönüş yapılacaktır. Amacımız, sizin
+            memnuniyetinizi en üst düzeyde sağlamak ve dijital ortamda kendinizi
+            güvende hissetmenizi temin etmektir.
+          </p>
+
+          <div
+            class="social-share"
+            style="
+              margin-top: 30px;
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              justify-content: center;
+            "
+          >
+            <span style="font-weight: 500">Sosyal Medya:</span>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://exampleteknikservis.com/kvkk.html"
+              target="_blank"
+              rel="noopener"
+              title="Facebook'ta Paylaş"
+              style="display: flex; align-items: center"
+            >
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72v70.62H22.89V288h81.38v224h100.2V288z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?url=https://exampleteknikservis.com/kvkk.html&amp;text=KVKK%20Aydınlatma%20Metni"
+              target="_blank"
+              rel="noopener"
+              title="Twitter'da Paylaş"
+              style="display: flex; align-items: center"
+            >
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M459.4 151.7c.32 4.54.32 9.1.32 13.66 0 138.72-105.58 298.56-298.56 298.56-59.5 0-114.68-17.22-161.14-47.11 8.44.97 16.87 1.44 25.81 1.44 49.06 0 94.19-16.63 132.3-44.84-46.13-.86-84.8-31.18-98.1-72.77 6.5.97 13.01 1.94 19.84 1.94 9.42 0 18.84-1.3 27.61-3.63-48.08-9.7-84.14-51.98-84.14-102.98v-1.3c14.08 7.83 30.18 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.2-37.36 14.32-52.95 51.97 63.67 129.3 105.58 216.36 110.14-1.62-7.83-2.59-15.98-2.59-24.13 0-58.72 47.43-106.15 106.15-106.15 30.5 0 58.09 12.67 77.41 33.14 24.13-4.86 46.78-13.66 67.13-25.81-7.83 24.5-24.5 45.01-46.13 58.09 21.36-2.27 41.83-8.21 60.67-16.57-14.32 21.04-32.36 39.59-53.25 54.44z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <!-- İletişim Bilgileri Sütunu -->
+          <div class="footer-column">
+            <h3>İletişim</h3>
+            <ul style="list-style: none; padding: 0">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                  ></path>
+                </svg>
+                <span id="footer-address">Mersin, Türkiye</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                  ></path>
+                </svg>
+                <a href="tel:08501234567" id="footer-phone2">0850 123 45 67</a>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64L448 448c35.3 0 64-28.7 64-64L512 176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                  ></path>
+                </svg>
+                <a href="mailto:example@gmail.com" id="footer-email"
+                  >example@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Site Haritası Sütunu -->
+          <div class="footer-column">
+            <h3>Site Haritası</h3>
+            <ul>
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+              <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+          </div>
+
+          <!-- Popüler Hizmetler Sütunu -->
+          <div class="footer-column">
+            <h3>Popüler Hizmetler</h3>
+            <ul>
+              <li>
+                <a href="/hizmet/Beyaz-Eşya-Servisi.html">Beyaz Eşya Tamiri</a>
+              </li>
+              <li>
+                <a href="/hizmet/Buzdolabı-Tamiri.html">Buzdolabı Tamiri</a>
+              </li>
+              <li>
+                <a href="/hizmet/Çamaşır-Makinesi.html">Çamaşır Makinesi</a>
+              </li>
+              <li>
+                <a href="/hizmet/Bulaşık-Makinesi.html">Bulaşık Makinesi</a>
+              </li>
+              <li><a href="/hizmet/Fırın-Tamiri.html">Fırın Tamiri</a></li>
+              <li><a href="/hizmet/Klima.html">Klima Servisi</a></li>
+              <li><a href="/hizmet/Kombi.html">Kombi Bakımı</a></li>
+              <li><a href="/hizmet/Televizyon.html">Televizyon Onarımı</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="footer-disclaimer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            style="
+              width: 1em;
+              height: 1em;
+              vertical-align: middle;
+              margin-right: 5px;
+              fill: currentColor;
+            "
+          >
+            <path
+              d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+            ></path>
+          </svg>
+          Bu web sitesi resmi yetkili servis değildir. Yalnızca garantisi sona
+          ermiş cihazlara teknik servis hizmeti sunulmaktadır.
+        </div>
+
+        <div class="copyright">
+          <p>
+            © 2025
+            <span id="footer-company-name-copyright">Teknik Servis</span>. Tüm
+            hakları saklıdır.
           </p>
         </div>
       </div>
-    </main>
-
-    <footer>
-      <div>&copy; 2025 Teknik Servis. Tüm hakları saklıdır.</div>
-      <div class="footer-note">
-        Bu web sitesi resmi yetkili servis değildir. Yalnızca garantisi sona
-        ermiş cihazlar için destek sunar.
-      </div>
     </footer>
+
+    <!-- Sticky Call CTA -->
+    <a href="tel:08501234567" class="sticky-call-cta" id="sticky-call-cta-main">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        style="
+          width: 1.4em;
+          height: 1.4em;
+          vertical-align: middle;
+          margin-right: 12px;
+          fill: currentColor;
+        "
+      >
+        <path
+          d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.5a370.66 370.66 0 0 1-177.1-177.1l60.5-49.6a24 24 0 0 0 6.9-28l-48-112A24 24 0 0 0 88.6 0H24A24 24 0 0 0 0 24C0 283.3 228.7 512 488 512a24 24 0 0 0 24-24v-64.6a24 24 0 0 0-14.6-22.6z"
+        />
+      </svg>
+      <span id="sticky-call-text">Hemen Ara</span>
+    </a>
+
+    <!-- Schema Markuplar -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "KVKK Aydınlatma Metni",
+        "description": "Firmamız web sitesi üzerinden kişisel veri toplamaz. KVKK Aydınlatma Metni ve kişisel verilerinizin korunması hakkında bilgi alın.",
+        "image": "img/favicon-32x32.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Beyaz Eşya Servisi"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Beyaz Eşya Servisi",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "img/favicon-32x32.png"
+          }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-07-22"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://exampleteknikservis.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "KVKK Aydınlatma Metni",
+            "item": "https://exampleteknikservis.com/kvkk.html"
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Beyaz Eşya Servisi",
+        "image": "img/favicon-32x32.png",
+        "url": "https://exampleteknikservis.com",
+        "telephone": "+90 850 123 45 67",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mersin, Türkiye",
+          "addressLocality": "Mersin",
+          "postalCode": "33000",
+          "addressCountry": "Türkiye"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.8123282,
+          "longitude": 34.6200216
+        },
+        "sameAs": [
+          "https://exampleteknikservis.com",
+          "https://www.facebook.com/exampleteknikservis"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Beyaz Eşya Servisi",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "100"
+        }
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function getCompanyData() {
+          const dataElement = document.getElementById("company-data");
+          if (dataElement) {
+            try {
+              return JSON.parse(dataElement.textContent);
+            } catch (e) {
+              console.error("Hata: Şirket verisi (JSON) okunamadı.", e);
+              return null;
+            }
+          }
+          console.error(
+            "Hata: 'company-data' ID'li script etiketi bulunamadı."
+          );
+          return null;
+        }
+
+        const company = getCompanyData();
+        if (!company) {
+          console.error(
+            "Şirket verileri yüklenemediği için scriptler durduruldu."
+          );
+          return;
+        }
+
+        // Şirket Bilgilerini Sayfaya Yerleştirme
+        function populateCompanyInfo() {
+          document.getElementById("company-name").textContent = company.name;
+          document.getElementById("footer-company-name").textContent =
+            company.name;
+          document.getElementById("footer-company-name-copyright").textContent =
+            company.name;
+
+          // KVKK metni içindeki iletişim mailini güncelle
+          const kvkkContactEmail =
+            document.getElementById("kvkk-contact-email");
+          if (kvkkContactEmail) {
+            kvkkContactEmail.textContent = company.email;
+            kvkkContactEmail.href = "mailto:" + company.email;
+          }
+
+          // Footer iletişim bilgileri
+          document.getElementById("footer-address").textContent = company.adres;
+          document.getElementById("footer-phone2").textContent = company.phone;
+          document.getElementById("footer-phone2").href =
+            "tel:" + company.phone.replace(/\s+/g, "");
+          document.getElementById("footer-email").textContent = company.email;
+          document.getElementById("footer-email").href =
+            "mailto:" + company.email;
+
+          // Sticky Call CTA butonu
+          const stickyCallCtaMain = document.getElementById(
+            "sticky-call-cta-main"
+          );
+          if (stickyCallCtaMain) {
+            stickyCallCtaMain.href = "tel:" + company.phone.replace(/\s+/g, "");
+            const stickyCallText = stickyCallCtaMain.querySelector("span");
+            if (stickyCallText) {
+              stickyCallText.textContent = "Hemen Ara";
+            }
+          }
+
+          // Schema güncellemeleri
+          const articleSchema = document.querySelector(
+            'script[type="application/ld+json"][itemtype="https://schema.org/Article"]'
+          );
+          if (articleSchema) {
+            try {
+              const schema = JSON.parse(articleSchema.textContent);
+              schema.author.name = company.name;
+              schema.publisher.name = company.name;
+              schema.dateModified = new Date().toISOString().split("T")[0];
+              articleSchema.textContent = JSON.stringify(schema, null, 2);
+            } catch (e) {
+              console.error("Article schema güncellenirken hata oluştu:", e);
+            }
+          }
+
+          const breadcrumbSchema = document.querySelector(
+            'script[type="application/ld+json"][itemtype="https://schema.org/BreadcrumbList"]'
+          );
+          if (breadcrumbSchema) {
+            try {
+              const schema = JSON.parse(breadcrumbSchema.textContent);
+              schema.itemListElement[0].item = company.url;
+              schema.itemListElement[1].item = company.url + "/kvkk.html";
+              breadcrumbSchema.textContent = JSON.stringify(schema, null, 2);
+            } catch (e) {
+              console.error(
+                "BreadcrumbList schema güncellenirken hata oluştu:",
+                e
+              );
+            }
+          }
+
+          const localBusinessSchema = document.querySelector(
+            'script[type="application/ld+json"][itemtype="https://schema.org/LocalBusiness"]'
+          );
+          if (localBusinessSchema) {
+            try {
+              const schema = JSON.parse(localBusinessSchema.textContent);
+              schema.name = company.name;
+              schema.telephone = company.phone;
+              schema.address.streetAddress = company.adres;
+              schema.address.addressLocality = company.adres
+                .split(",")[0]
+                .trim();
+              localBusinessSchema.textContent = JSON.stringify(schema, null, 2);
+            } catch (e) {
+              console.error(
+                "LocalBusiness schema güncellenirken hata oluştu:",
+                e
+              );
+            }
+          }
+
+          const organizationSchema = document.querySelector(
+            'script[type="application/ld+json"][itemtype="https://schema.org/Organization"]'
+          );
+          if (organizationSchema) {
+            try {
+              const schema = JSON.parse(organizationSchema.textContent);
+              schema.name = company.name;
+              organizationSchema.textContent = JSON.stringify(schema, null, 2);
+            } catch (e) {
+              console.error(
+                "Organization schema güncellenirken hata oluştu:",
+                e
+              );
+            }
+          }
+        }
+
+        // Mobil Navigasyon ve Dropdown Yönetimi
+        const toggleButton = document.querySelector(".mobile-nav-toggle");
+        const nav = document.querySelector(".main-nav");
+        if (toggleButton && nav) {
+          toggleButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+            nav.classList.toggle("show");
+          });
+        }
+
+        const hizmetlerimizLink = document.getElementById("nav-hizmetlerimiz");
+        if (hizmetlerimizLink) {
+          const hizmetlerimizDropdown = hizmetlerimizLink.closest(".dropdown");
+          hizmetlerimizLink.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              hizmetlerimizDropdown.classList.toggle("open");
+            }
+          });
+        }
+
+        document.addEventListener("click", function (event) {
+          if (
+            nav &&
+            nav.classList.contains("show") &&
+            !nav.contains(event.target) &&
+            !toggleButton.contains(event.target)
+          ) {
+            nav.classList.remove("show");
+          }
+          const openDropdown = document.querySelector(".dropdown.open");
+          if (openDropdown && !openDropdown.contains(event.target)) {
+            openDropdown.classList.remove("open");
+          }
+        });
+
+        // Hizmet Linklerini Dinamik URL'ye Yönlendirme
+        document
+          .querySelectorAll('a[href^="/hizmet/"]')
+          .forEach(function (link) {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const href = link.getAttribute("href");
+              const serviceName = href
+                .substring(href.lastIndexOf("/") + 1)
+                .replace(".html", "")
+                .replace(/-/g, " ");
+              window.location.href = `hizmet.html?service=${encodeURIComponent(
+                serviceName
+              )}`;
+            });
+          });
+
+        // Başlangıç fonksiyonlarını çağır
+        populateCompanyInfo();
+      });
+    </script>
   </body>
 </html>
