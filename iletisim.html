@@ -487,7 +487,7 @@
 
       /* Footer */
       footer {
-        background-color: var(--footer-bg);
+        background-color: #0d0d0d; /* index.html ile tutarlı */
         color: var(--footer-text);
         padding: 50px 0 20px;
         position: relative;
@@ -499,6 +499,16 @@
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 40px;
         margin-bottom: 40px;
+      }
+
+      .footer-column {
+        text-align: left; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .footer-column {
+          text-align: center; /* Mobil ve tabletlerde ortala */
+        }
       }
 
       .footer-column h3 {
@@ -539,7 +549,7 @@
         opacity: 0.8;
       }
 
-      /* Footer ikon boyutu */
+      /* Footer ikon boyut düzeltme */
       footer .footer-column svg {
         width: 1.2em;
         height: 1.2em;
@@ -550,6 +560,30 @@
         vertical-align: middle;
         margin-right: 8px;
         fill: var(--accent-color);
+      }
+
+      /* Sosyal Medya İkonları */
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: flex-start; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .social-icons {
+          justify-content: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 1.5em;
+        transition: color 0.2s;
+      }
+
+      .social-icons a:hover {
+        color: var(--accent-color);
       }
 
       #footer-disclaimer {
@@ -710,6 +744,7 @@
         flex-shrink: 0;
         color: #000; /* Updated for contrast */
         vertical-align: middle; /* İkonu metinle hizala */
+        margin-right: 8px; /* İkon ile metin arasına boşluk */
       }
       .sticky-call-cta:hover,
       .sticky-call-cta:focus {
@@ -889,7 +924,7 @@
               <li class="contact-info-item">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path
-                    d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512 512 397.4 512 256 397.4 0 256 0zM256 464c-114.7 0-208-93.3-208-208S141.3 48 256 48s208 93.3 208 208-93.3 208-208 208zM256 128c-17.7 0-32 14.3-32 32v128c0 17.7 14.3 32 32 32s32-14.3 32-32V160c0-17.7-14.3-32-32-32zM256 352a32 32 0 1 0 0 64 32 32 0 1 0 0-64z"
+                    d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512 512 397.4 512 256 397.4 0 256 0zM256 464c-114.7 0-208-93.3-208-208S141.3 48 256 48s208 93.3 208 208-93.3 208-208 208zM256 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
                   />
                 </svg>
                 <div>
@@ -1101,25 +1136,7 @@
                   >example@gmail.com</a
                 >
               </li>
-              <!-- Yeni eklenen dış bağlantı -->
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 576 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M576 240c0 10.9-7.9 20.5-19.2 24.2L416 312.6V448c0 17.7-14.3 32-32 32H288V368c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32v112H32c-17.7 0-32-14.3-32-32V240c0-10.9 7.9-20.5 19.2-24.2L288 8.6l268.8 207.2C568.1 219.5 576 229.1 576 240z"
-                  />
-                </svg>
-                <a
-                  href="https://www.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >İlgili Kaynaklar</a
-                >
-              </li>
+              <!-- "İlgili Kaynaklar" kısmı kaldırıldı -->
             </ul>
           </div>
 
