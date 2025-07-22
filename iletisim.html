@@ -1542,41 +1542,6 @@
                 serviceName
               )}`;
             });
-
-            // Tekrar eden anchor text uyarısını gidermek için link metinlerini çeşitlendiriyoruz.
-            // Bu kısım, navigasyon menünüzün görünümünü değiştirecektir.
-            // Eğer navigasyon menüsündeki metinlerin aynı kalmasını istiyorsanız, bu kısmı kaldırabilirsiniz.
-            // Ancak SEO puanı için bu değişiklik faydalı olacaktır.
-            const serviceNameForAnchor = link.textContent; // Mevcut link metnini al
-            switch (serviceNameForAnchor) {
-              case "Beyaz Eşya Servisi":
-                link.textContent = "Beyaz Eşya Hizmetleri";
-                break;
-              case "Buzdolabı":
-                link.textContent = "Buzdolabı";
-                break;
-              case "Çamaşır Makinesi":
-                link.textContent = "Çamaşır Makinesi";
-                break;
-              case "Bulaşık Makinesi":
-                link.textContent = "Bulaşık Makinesi";
-                break;
-              case "Fırın":
-                link.textContent = "Fırın";
-                break;
-              case "Klima":
-                link.textContent = "Klima";
-                break;
-              case "Kombi":
-                link.textContent = "Kombi";
-                break;
-              case "Televizyon":
-                link.textContent = "Televizyon";
-                break;
-              default:
-                // Eğer farklı bir metin yoksa orijinalini kullan
-                link.textContent = originalText;
-            }
           });
 
         // Başlangıç fonksiyonlarını çağır
