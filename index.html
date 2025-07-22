@@ -714,7 +714,24 @@
             hızlı, profesyonel ve uygun fiyatlı servis hizmeti.
           </p>
           <a href="tel:08501234567" class="call-button" id="hero-call-btn">
-            📞 Hemen Servis Çağır
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-phone"
+              style="vertical-align: middle; margin-right: 8px"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-3.67-3.67A19.79 19.79 0 0 1 2 4.18 2 2 0 0 1 4.18 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+            Hemen Servis Çağır
           </a>
         </div>
       </section>
@@ -1050,8 +1067,8 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Ana Sayfa - Beyaz Eşya ve Elektronik Cihaz Tamiri",
-        "description": "Garantisi dolmuş tüm beyaz eşya ve elektronik cihazlarınız için uygun fiyatlı, hızlı ve profesyonel bakım, onarım ve tamir hizmetleri. Hemen arayın!",
+        "name": "Beyaz Eşya ve Elektronik Cihaz Servisi | Hızlı & Garantili Servis",
+        "description": "garantisi bitmiş beyaz eşya ve elektronik cihazlarınız için hızlı, güvenilir ve uygun fiyatlı tamir, bakım ve onarım hizmetleri. Buzdolabı, çamaşır makinesi, klima, kombi ve televizyon arızalarında uzman teknik servisimizle hemen iletişime geçin, 1 yıl garantili çözümlerle cihazlarınızı ilk günkü gibi çalıştıralım!",
         "url": "https://exampleteknikservis.com/index.html",
         "publisher": {
           "@type": "Organization",
@@ -1329,9 +1346,11 @@
           if (webPageSchema) {
             try {
               const schema = JSON.parse(webPageSchema.textContent);
-              schema.name = "Ana Sayfa - Beyaz Eşya ve Elektronik Cihaz Tamiri";
+              // Schema'daki name ve description alanlarını head'deki title ve description ile tutarlı hale getir
+              schema.name =
+                "Beyaz Eşya ve Elektronik Cihaz Servisi | Hızlı & Garantili Servis";
               schema.description =
-                "Garantisi dolmuş tüm beyaz eşya ve elektronik cihazlarınız için uygun fiyatlı, hızlı ve profesyonel bakım, onarım ve tamir hizmetleri. Hemen arayın!";
+                "garantisi bitmiş beyaz eşya ve elektronik cihazlarınız için hızlı, güvenilir ve uygun fiyatlı tamir, bakım ve onarım hizmetleri. Buzdolabı, çamaşır makinesi, klima, kombi ve televizyon arızalarında uzman teknik servisimizle hemen iletişime geçin, 1 yıl garantili çözümlerle cihazlarınızı ilk günkü gibi çalıştıralım!";
               schema.url = company.url + "/index.html";
               schema.publisher.name = company.name;
               webPageSchema.textContent = JSON.stringify(schema, null, 2);
