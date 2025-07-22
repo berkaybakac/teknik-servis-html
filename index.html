@@ -417,6 +417,16 @@
         margin-bottom: 40px;
       }
 
+      .footer-column {
+        text-align: left; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .footer-column {
+          text-align: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
       .footer-column h3 {
         font-size: 1.2rem;
         margin-bottom: 20px;
@@ -473,7 +483,13 @@
         display: flex;
         gap: 15px;
         margin-top: 20px;
-        justify-content: center; /* Ortalamak için */
+        justify-content: flex-start; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .social-icons {
+          justify-content: center; /* Mobil ve tabletlerde ortala */
+        }
       }
 
       .social-icons a {
@@ -550,6 +566,7 @@
       .sticky-call-cta svg {
         flex-shrink: 0;
         color: #000; /* Changed for contrast */
+        vertical-align: middle; /* İkonu metinle hizala */
       }
       .sticky-call-cta:hover,
       .sticky-call-cta:focus {
@@ -759,7 +776,7 @@
           <div class="service-cards">
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> 7/24 Hizmet</h3>
+                <h3 class="card-title">7/24 Hizmet</h3>
                 <p class="card-description">
                   Günün her saati kesintisiz teknik servis desteği. Acil
                   durumlarda yanınızdayız.
@@ -768,7 +785,7 @@
             </div>
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> 1 Yıl Garanti</h3>
+                <h3 class="card-title">1 Yıl Garanti</h3>
                 <p class="card-description">
                   Tüm servis işlemlerimizde ve değişen parçalarda 1 yıl gerçek
                   garanti sunuyoruz.
@@ -777,7 +794,7 @@
             </div>
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> Hızlı Müdahale</h3>
+                <h3 class="card-title">Hızlı Müdahale</h3>
                 <p class="card-description">
                   Çağrılarınıza 20 dakika içinde geri dönüş ve aynı gün randevu
                   imkanı.
@@ -786,7 +803,7 @@
             </div>
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> %100 Memnuniyet</h3>
+                <h3 class="card-title">%100 Memnuniyet</h3>
                 <p class="card-description">
                   Müşteri odaklı yaklaşımımız ve güler yüzlü hizmet
                   anlayışımızla tam memnuniyet.
@@ -795,7 +812,7 @@
             </div>
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> En Uygun Fiyat</h3>
+                <h3 class="card-title">En Uygun Fiyat</h3>
                 <p class="card-description">
                   Kaliteli ve güvenilir hizmeti, bütçenizi yormayacak en
                   ekonomik fiyatlarla sunarız.
@@ -804,7 +821,7 @@
             </div>
             <div class="card">
               <a href="#" class="card-body">
-                <h3 class="card-title"> %100 Güvenilir</h3>
+                <h3 class="card-title">%100 Güvenilir</h3>
                 <p class="card-description">
                   Belgeli, eğitimli ve sürekli güncel kalan uzman teknik kadro
                   ile güvenilir hizmet.
@@ -994,25 +1011,7 @@
                   >example@gmail.com</a
                 >
               </li>
-              <!-- Yeni eklenen dış bağlantı -->
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 576 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M576 240c0 10.9-7.9 20.5-19.2 24.2L416 312.6V448c0 17.7-14.3 32-32 32H288V368c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32v112H32c-17.7 0-32-14.3-32-32V240c0-10.9 7.9-20.5 19.2-24.2L288 8.6l268.8 207.2C568.1 219.5 576 229.1 576 240z"
-                  />
-                </svg>
-                <a
-                  href="https://www.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >İlgili Kaynaklar</a
-                >
-              </li>
+              <!-- "İlgili Kaynaklar" kısmı kaldırıldı -->
             </ul>
           </div>
 
@@ -1048,7 +1047,6 @@
               <li><a href="/hizmet/Klima.html">Klima Servisi</a></li>
               <li><a href="/hizmet/Kombi.html">Kombi Bakımı</a></li>
               <li><a href="/hizmet/Televizyon.html">Televizyon Onarımı</a></li>
-            </ul>
             </ul>
           </div>
 
@@ -1166,7 +1164,7 @@
           width: 1.4em;
           height: 1.4em;
           vertical-align: middle;
-          margin-right: 12px;
+          margin-right: 8px; /* İkon ile metin arasına boşluk */
           fill: currentColor;
         "
       >
@@ -1404,8 +1402,6 @@
         // Şirket bilgilerini sayfaya yerleştirir
         function populateCompanyInfo() {
           document.getElementById("company-name").textContent = company.name;
-          // Removed the problematic line as 'footer-company-name' ID does not exist in HTML
-          // document.getElementById("footer-company-name").textContent = company.name;
           document.getElementById("footer-company-name-copyright").textContent =
             company.name;
 
@@ -1590,7 +1586,6 @@
                 serviceName
               )}`;
             });
-           
           });
 
         // Müşteri Yorumları Yönetimi
