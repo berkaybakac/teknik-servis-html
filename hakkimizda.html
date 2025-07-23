@@ -617,12 +617,7 @@
         "email": "example@gmail.com",
         "url": "https://teknik-servis-html.vercel.app",
         "adres": "Mersin, Türkiye",
-        "vergiNo": "1234567890",
-        "foundingDate": "2010",
-        "calismaSaatleri": "Haftaiçi 09:00 - 18:00",
-        "kvkkUrl": "/kvkk.html",
-        "cerezPolitikasiUrl": "/cerez-politikasi.html",
-        "garantiPolitikasiUrl": "/garanti-politikasi.html"
+        "vergiNo": "1234567890"
       }
     </script>
 
@@ -710,12 +705,11 @@
               <span class="company-name-highlight" id="about-company-name-1"
                 >Teknik Servis</span
               >
-              olarak, <span id="about-founding-date">uzun</span> yıllardan bu
-              yana beyaz eşya ve elektronik cihaz tamiri sektöründe güvenilir ve
-              profesyonel hizmetler sunmaktayız. Amacımız, garantisi dolmuş
-              cihazlarınızda meydana gelen arızaları en hızlı, en etkili ve en
-              ekonomik şekilde çözerek, günlük hayatınızdaki aksaklıkları en aza
-              indirmektir.
+              olarak, kurulduğumuz günden bu yana bu yana beyaz eşya ve
+              elektronik cihaz tamiri sektöründe güvenilir ve profesyonel
+              hizmetler sunmaktayız. Amacımız, garantisi dolmuş cihazlarınızda
+              meydana gelen arızaları en hızlı, en etkili ve en ekonomik şekilde
+              çözerek, günlük hayatınızdaki aksaklıkları en aza indirmektir.
             </p>
 
             <h2>Deneyim ve Uzmanlık</h2>
@@ -767,9 +761,9 @@
             </p>
 
             <p>
-              **Not:** Firmamız, bahsi geçen markaların yetkili servisi
-              değildir. Sadece garantisi dolmuş cihazlar için profesyonel bakım
-              ve onarım hizmeti sunmaktayız.
+              Not: Firmamız, bahsi geçen markaların yetkili servisi değildir.
+              Sadece garantisi dolmuş cihazlar için profesyonel bakım ve onarım
+              hizmeti sunmaktayız.
             </p>
           </article>
 
@@ -1178,12 +1172,11 @@
           return;
         }
 
-        // Şirket Bilgilerini Sayfaya Yerleştirme
+        // Şirket bilgilerini sayfaya yerleştirir
         function populateCompanyInfo() {
           document.getElementById("company-name").textContent = company.name;
-          // Kaldırılan satır: document.getElementById("footer-company-name").textContent = company.name;
           document.getElementById("footer-company-name-copyright").textContent =
-            company.sirketAdi; // Şirket adı copyright için güncellendi
+            company.name;
 
           // Hakkımızda metni içindeki dinamik alanları güncelle
           const aboutCompanyName1 = document.getElementById(
