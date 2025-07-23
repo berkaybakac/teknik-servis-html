@@ -523,11 +523,11 @@
       .sticky-call-cta {
         position: fixed;
         left: 50%;
-        bottom: 20px;
+        bottom: 20px; /* Butonu alta yaklaştırdık */
         transform: translateX(-50%);
         z-index: 9999;
-        background: #009540;
-        color: #fff;
+        background: var(--primary-color); /* Updated for consistency */
+        color: #000; /* Updated for contrast */
         font-weight: 700;
         font-size: 1.3rem;
         border-radius: 999px;
@@ -550,11 +550,13 @@
       }
       .sticky-call-cta svg {
         flex-shrink: 0;
-        color: #fff;
+        color: #000; /* Updated for contrast */
+        vertical-align: middle; /* İkonu metinle hizala */
+        margin-right: 8px; /* İkon ile metin arasına boşluk */
       }
       .sticky-call-cta:hover,
       .sticky-call-cta:focus {
-        background: #007a36;
+        background: var(--secondary-color);
         text-decoration: none;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.13);
         transform: translateX(-50%) scale(1.03);
@@ -563,7 +565,7 @@
         .sticky-call-cta {
           font-size: 1rem;
           padding: 0.6em 0.9em 0.6em 0.8em;
-          bottom: 15px;
+          bottom: 15px; /* Mobil için daha da alta yaklaştırdık */
         }
         .sticky-call-cta span {
           font-size: 1em;
@@ -936,7 +938,7 @@
           width: 1.4em;
           height: 1.4em;
           vertical-align: middle;
-          margin-right: 12px;
+          margin-right: 8px; /* İkon ile metin arasına boşluk */
           fill: currentColor;
         "
       >
