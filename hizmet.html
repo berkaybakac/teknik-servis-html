@@ -58,6 +58,7 @@
         background-color: #000;
         font-size: 16px;
         overflow-x: hidden;
+        font-display: swap; /* Font yüklenene kadar ani kaymayı önlemek için */
       }
 
       .container {
@@ -811,6 +812,7 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 18px;
         margin-top: 18px;
+        min-height: 300px; /* CLS'yi azaltmak için minimum yükseklik */
       }
       @media (min-width: 600px) {
         .notfound-services-list-grid {
@@ -1013,6 +1015,7 @@
     </script>
   </head>
   <body>
+    <!-- Şirket bilgilerini içeren JSON verisi -->
     <script id="company-data" type="application/json">
       {
         "name": "Teknik Servis",
@@ -1025,12 +1028,17 @@
       }
     </script>
 
-    <!-- Header -->
+    <!-- Header Bölümü -->
     <header>
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <a href="index.html" id="company-name">Beyaz Eşya Servisi</a>
+            <a
+              href="index.html"
+              id="company-name"
+              aria-label="Anasayfa - Beyaz Eşya Servisi"
+              >Beyaz Eşya Servisi</a
+            >
           </div>
           <button
             class="mobile-nav-toggle"
@@ -1070,7 +1078,6 @@
                   <a href="/hizmet/Televizyon.html">Televizyon</a>
                 </div>
               </li>
-
               <li><a href="hakkimizda.html">Hakkımızda</a></li>
               <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
               <li><a href="kvkk.html">KVKK</a></li>
@@ -1102,38 +1109,24 @@
           servis hizmetleri.
         </p>
         <div class="hero-buttons">
-          <!-- Hero section call button -->
-          <div style="display: flex; justify-content: center; margin: 32px 0">
-            <a
-              href="tel:08501234567"
-              id="hero-call-btn"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                background: #066b32;
-                color: #fff;
-                font-weight: 600;
-                font-size: 1.4rem;
-                border: none;
-                border-radius: 22px;
-                padding: 16px 36px;
-                text-decoration: none;
-                box-shadow: none;
-                transition: background 0.2s;
-              "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#fff"
-                  d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .22 2.07.34 3.18.34a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.12 2.18.34 3.18a1 1 0 01-.27.91l-2.2 2.2z"
-                />
+          <div style="display: flex; justify-content: center; margin: 32px 0;">
+            <a href="tel:08501234567" id="hero-call-btn" style="
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              background: #066b32;
+              color: #fff;
+              font-weight: 600;
+              font-size: 1.4rem;
+              border: none;
+              border-radius: 22px;
+              padding: 16px 36px;
+              text-decoration: none;
+              box-shadow: none;
+              transition: background 0.2s;
+            ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24">
+                <path fill="#fff" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .22 2.07.34 3.18.34a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.12 2.18.34 3.18a1 1 0 01-.27.91l-2.2 2.2z"/>
               </svg>
               Hemen Servis Çağır
             </a>
@@ -1149,63 +1142,27 @@
         </div>
         <div class="service-badges">
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <circle cx="256" cy="256" r="256" fill="#009e3c" />
-              <path
-                d="M352 320c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24z"
-                fill="#fff"
-              />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#009e3c"/><path d="M352 320c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24z" fill="#fff"/></svg>
             7/24 Hizmet
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <rect x="2" y="6" width="20" height="12" rx="2" fill="#009e3c" />
-              <path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" fill="#009e3c" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></g></svg>
             1 Yıl Garanti
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="#009e3c" />
-              <path
-                d="M12 6v6l4 2"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-              />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg>
             20 Dakika
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="#009e3c" />
-              <circle cx="12" cy="10" r="3" fill="#fff" />
-              <path
-                d="M8 16c0-2.2 3.6-2.2 3.6 0"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                fill="none"
-              />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#009e3c"/><circle cx="12" cy="10" r="3" fill="#fff"/><path d="M8 16c0-2.2 3.6-2.2 3.6 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></g></svg>
             %100 Mutluluk
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <rect x="2" y="7" width="20" height="10" rx="2" fill="#009e3c" />
-              <circle cx="7" cy="12" r="1" fill="#fff" />
-              <circle cx="17" cy="12" r="1" fill="#fff" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><rect x="2" y="7" width="20" height="10" rx="2"/><circle cx="7" cy="12" r="1" fill="#fff"/><circle cx="17" cy="12" r="1" fill="#fff"/></g></svg>
             En Ucuz
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M12 2l7 7-7 13-7-13z" fill="#009e3c" />
-              <circle cx="12" cy="9" r="2" fill="#fff" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><path d="M12 2l7 7-7 13-7-13z"/><circle cx="12" cy="9" r="2" fill="#fff"/></g></svg>
             %100 Güvenilir
           </span>
         </div>
@@ -1226,8 +1183,7 @@
       "
     >
       <p style="margin-top: 6px; font-size: 0.93em; color: #bbb">
-        Sunduğumuz profesyonel teknik servis hizmetlerimiz aşağıda
-        listelenmiştir.
+        Sunduğumuz profesyonel teknik servis hizmetlerimiz aşağıda listelenmiştir.
       </p>
       <div
         id="notfound-services-list"
@@ -1246,98 +1202,62 @@
                 <div class="review-list-grid">
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      İlk defa bu kadar hızlı ve düzgün bir servis aldım.
-                      Geldikleri gibi sorunu çözdüler.
-                    </p>
+                    <p>İlk defa bu kadar hızlı ve düzgün bir servis aldım. Geldikleri gibi sorunu çözdüler.</p>
                     <div class="review-author">– Ayşe K.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Kombi bakımı zamanında yapıldı. Teknisyen oldukça kibar ve
-                      açıklayıcıydı. Tavsiye ederim.
-                    </p>
+                    <p>Kombi bakımı zamanında yapıldı. Teknisyen oldukça kibar ve açıklayıcıydı. Tavsiye ederim.</p>
                     <div class="review-author">– Mehmet D.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      Buzdolabımız çalışmıyordu, ertesi gün gelip tamir ettiler.
-                      Artık çok sessiz çalışıyor.
-                    </p>
+                    <p>Buzdolabımız çalışmıyordu, ertesi gün gelip tamir ettiler. Artık çok sessiz çalışıyor.</p>
                     <div class="review-author">– Emre S.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Servis biraz geç geldi ama işi düzgün yaptı. Fiyatlar
-                      makul.
-                    </p>
+                    <p>Servis biraz geç geldi ama işi düzgün yaptı. Fiyatlar makul.</p>
                     <div class="review-author">– Derya U.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      Fırın tamiri için başvurduk. Parça değişimi gerekti ama
-                      her aşamada bilgilendirildik. Memnun kaldık.
-                    </p>
+                    <p>Fırın tamiri için başvurduk. Parça değişimi gerekti ama her aşamada bilgilendirildik. Memnun kaldık.</p>
                     <div class="review-author">– Zeynep T.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Çamaşır makinemiz artık ses yapmıyor. Detaylı bakım
-                      yapıldı.
-                    </p>
+                    <p>Çamaşır makinemiz artık ses yapmıyor. Detaylı bakım yapıldı.</p>
                     <div class="review-author">– Burak A.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      Telefonla ulaşmak kolaydı. Hızlıca randevu verip aynı gün
-                      geldiler.
-                    </p>
+                    <p>Telefonla ulaşmak kolaydı. Hızlıca randevu verip aynı gün geldiler.</p>
                     <div class="review-author">– Seda Y.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      İletişimden montaja kadar süreç çok profesyoneldi.
-                      Klimamız yeniden çalışıyor, teşekkürler.
-                    </p>
+                    <p>İletişimden montaja kadar süreç çok profesyoneldi. Klimamız yeniden çalışıyor, teşekkürler.</p>
                     <div class="review-author">– Onur B.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Televizyon ekranında çizgi çıkıyordu. Kısa sürede tamir
-                      ettiler. Uygun fiyatlıydı.
-                    </p>
+                    <p>Televizyon ekranında çizgi çıkıyordu. Kısa sürede tamir ettiler. Uygun fiyatlıydı.</p>
                     <div class="review-author">– Nazlı E.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>
-                      Hem müşteri ilişkileri hem de teknik bilgi açısından çok
-                      memnun kaldık.
-                    </p>
+                    <p>Hem müşteri ilişkileri hem de teknik bilgi açısından çok memnun kaldık.</p>
                     <div class="review-author">– Gökhan R.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Daha önce başka bir firmayla sorun yaşamıştık ama Teknik
-                      Servis çok güven verdi.
-                    </p>
+                    <p>Daha önce başka bir firmayla sorun yaşamıştık ama Teknik Servis çok güven verdi.</p>
                     <div class="review-author">– Elif Ç.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>
-                      Montaj sonrası küçük bir sorun yaşadık, ama arayınca hemen
-                      gelip düzelttiler.
-                    </p>
+                    <p>Montaj sonrası küçük bir sorun yaşadık, ama arayınca hemen gelip düzelttiler.</p>
                     <div class="review-author">– Kemal T.</div>
                   </div>
                 </div>
@@ -1351,12 +1271,7 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>
-                        Servis ücretlerimiz arızanın türüne, cihazın modeline ve
-                        gerekli yedek parça ihtiyacına göre belirlenmektedir.
-                        Fiyatlandırma konusunda her zaman şeffaf davranıyor,
-                        işlem öncesi sizi bilgilendiriyoruz.
-                      </p>
+                      <p>Servis ücretlerimiz arızanın türüne, cihazın modeline ve gerekli yedek parça ihtiyacına göre belirlenmektedir. Fiyatlandırma konusunda her zaman şeffaf davranıyor, işlem öncesi sizi bilgilendiriyoruz.</p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1365,11 +1280,7 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>
-                        Müsaitlik durumuna göre aynı gün içerisinde servis
-                        hizmeti sağlanabilir. Erken saatlerde randevu almanız
-                        tavsiye edilir.
-                      </p>
+                      <p>Müsaitlik durumuna göre aynı gün içerisinde servis hizmeti sağlanabilir. Erken saatlerde randevu almanız tavsiye edilir.</p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1378,10 +1289,7 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>
-                        Tüm servis işlemlerimiz 1 yıl garantilidir. Aynı arıza
-                        tekrar ederse, ücretsiz destek sunulmaktadır.
-                      </p>
+                      <p>Tüm servis işlemlerimiz 1 yıl garantilidir. Aynı arıza tekrar ederse, ücretsiz destek sunulmaktadır.</p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1390,11 +1298,7 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>
-                        Kullandığımız tüm parçalar orijinal ve garantilidir.
-                        Talebiniz doğrultusunda muadil ürün seçeneği de
-                        sunabiliriz.
-                      </p>
+                      <p>Kullandığımız tüm parçalar orijinal ve garantilidir. Talebiniz doğrultusunda muadil ürün seçeneği de sunabiliriz.</p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1403,58 +1307,29 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>
-                        Arçelik, Beko, Bosch, Siemens, Samsung, LG, Vestel,
-                        Altus, Profilo ve birçok farklı markaya Teknik Servis
-                        olarak teknik hizmet sunuyoruz.
-                      </p>
+                      <p>Arçelik, Beko, Bosch, Siemens, Samsung, LG, Vestel, Altus, Profilo ve birçok farklı markaya Teknik Servis olarak teknik hizmet sunuyoruz.</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Makale Alanı -->
-                <section class="makale" style="margin-top: 60px">
+                <section class="makale" style="margin-top: 60px;">
                   <div class="makale-icerik">
                     <!-- MAKALE METNİ -->
                     <p>
-                      Beyaz Eşya Servisi: Buzdolabı, Çamaşır Makinesi, Bulaşık
-                      Makinesi, Fırın, Klima, Kombi Ve Televizyon İçin
-                      Profesyonel Teknik Destek Ve Sık Arıza Çözümleri,
-                      evlerimizin vazgeçilmez unsurları olan beyaz eşyaların
-                      sorunsuz çalışmasını sağlar. Ev aletleri, günlük yaşamı
-                      kolaylaştıran önemli araçlardır; bu nedenle bu aletlerin
-                      bakımı ve tamiri oldukça önemlidir. Beyaz eşya teknik
-                      servisleri, bu cihazların arızalarını hızlı ve etkili bir
-                      şekilde çözer. Böylece, kullanıcılar yaşanan sorunlardan
-                      en kısa sürede kurtulur. Ayrıca, klima ve kombi bakım
-                      onarımı düzenli yapılmalıdır. Bu durum, enerji
-                      verimliliğini artırır ve cihazların ömrünü uzatır.
+                      Beyaz Eşya Servisi: Buzdolabı, Çamaşır Makinesi, Bulaşık Makinesi, Fırın, Klima, Kombi Ve Televizyon İçin Profesyonel Teknik Destek Ve Sık Arıza Çözümleri, evlerimizin vazgeçilmez unsurları olan beyaz eşyaların sorunsuz çalışmasını sağlar. Ev aletleri, günlük yaşamı kolaylaştıran önemli araçlardır; bu nedenle bu aletlerin bakımı ve tamiri oldukça önemlidir. Beyaz eşya teknik servisleri, bu cihazların arızalarını hızlı ve etkili bir şekilde çözer. Böylece, kullanıcılar yaşanan sorunlardan en kısa sürede kurtulur. Ayrıca, klima ve kombi bakım onarımı düzenli yapılmalıdır. Bu durum, enerji verimliliğini artırır ve cihazların ömrünü uzatır.
                     </p>
                   </div>
-                  <div
-                    class="social-share"
-                    style="
-                      margin-top: 40px;
-                      display: flex;
-                      align-items: center;
-                      gap: 14px;
-                      justify-content: center;
-                    "
-                  >
-                    <span style="font-weight: 500">Sosyal Medya:</span>
+                  <div class="social-share" style="margin-top: 40px; display: flex; align-items: center; gap: 14px; justify-content: center;">
+                    <span style="font-weight: 500;">Sosyal Medya:</span>
                     <a
                       href="https://twitter.com/intent/tweet?url="
                       target="_blank"
                       rel="noopener"
                       title="Twitter'da Paylaş"
-                      style="display: flex; align-items: center"
+                      style="display: flex; align-items: center;"
                     >
-                      <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        viewBox="0 0 512 512"
-                      >
+                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 512 512">
                         <path
                           d="M459.4 151.7c.32 4.54.32 9.1.32 13.66
                           0 138.72-105.58 298.56-298.56 298.56-59.5
@@ -1481,14 +1356,9 @@
                       target="_blank"
                       rel="noopener"
                       title="Facebook'ta Paylaş"
-                      style="display: flex; align-items: center"
+                      style="display: flex; align-items: center;"
                     >
-                      <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        viewBox="0 0 320 512"
-                      >
+                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 320 512">
                         <path
                           d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35
                           12.42-50.06 52.24-50.06H293V6.26S259.5
@@ -1698,7 +1568,7 @@
       </div>
     </footer>
 
-    <!-- Sticky Call CTA -->
+    <!-- Sabit Çağrı Butonu (Sticky Call CTA) -->
     <a href="tel:08501234567" class="sticky-call-cta" id="sticky-call-cta-main">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -1718,6 +1588,7 @@
       <span id="sticky-call-text">Hemen Ara</span>
     </a>
 
+    <!-- Schema Markupları -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1865,7 +1736,7 @@
           }
         });
 
-        // Makale Bölümlerini Yavaş Yükleme (Lazy Load)
+        // Makale Bölümlerini Yavaş Yükleme
         const bolumler = document.querySelectorAll(".makale-bolum");
         if (bolumler.length > 1) {
           let yuklenen = 1;
@@ -1919,97 +1790,87 @@
             "mailto:" + company.email;
 
           // Sabit Çağrı Butonu (Sticky Call CTA)
-          const stickyCallCtaMain = document.getElementById(
-            "sticky-call-cta-main"
-          );
+          const stickyCallCtaMain = document.getElementById("sticky-call-cta-main");
           if (stickyCallCtaMain) {
-            stickyCallCtaMain.href = "tel:" + company.phone.replace(/\s+/g, "");
+            stickyCallCtaMain.href = "tel:" + company.phone.replace(/\s+/g, '');
             const stickyCallText = stickyCallCtaMain.querySelector("span");
             if (stickyCallText) {
-              stickyCallText.textContent = "Hemen Ara";
+                stickyCallText.textContent = "Hemen Ara";
             }
           }
 
           // Hero bölümündeki çağrı butonu (hero-call-btn)
           const heroCallBtn = document.getElementById("hero-call-btn");
           if (heroCallBtn) {
-            heroCallBtn.href = "tel:" + company.phone.replace(/\s+/g, "");
+            heroCallBtn.href = "tel:" + company.phone.replace(/\s+/g, '');
           }
         }
 
-        // Dinamik Hizmet Sayfası Mantığı
-        function handleDynamicServicePage() {
-          const urlParams = new URLSearchParams(window.location.search);
-          const serviceParam = urlParams.get("service");
-          const serviceNotFoundDiv =
-            document.getElementById("service-not-found");
-          const serviceContentDiv = document.querySelector(".service-content");
-          const serviceHeaderSection = document.getElementById(
-            "service-header-section"
-          );
-          const breadcrumbService = document.querySelector(
-            ".breadcrumb-service"
-          );
+       // Dinamik Hizmet Sayfası Mantığı
+function handleDynamicServicePage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get("service");
+  const serviceNotFoundDiv = document.getElementById("service-not-found");
+  const serviceContentDiv = document.querySelector(".service-content");
+  const serviceHeaderSection = document.getElementById("service-header-section");
+  const breadcrumbService = document.querySelector(".breadcrumb-service");
 
-          if (!serviceParam || serviceParam.trim() === "") {
-            serviceNotFoundDiv.style.display = "block";
-            serviceContentDiv.style.display = "none";
-            serviceHeaderSection.style.display = "none";
-            document.title = "Hizmet Bulunamadı - " + company.name;
-            populateNotFoundServices();
-            if (breadcrumbService) {
-              breadcrumbService.textContent = "Hizmet Bulunamadı";
-            }
-          } else {
-            const serviceName = decodeURIComponent(serviceParam);
-            serviceNotFoundDiv.style.display = "none";
-            serviceContentDiv.style.display = "block";
-            serviceHeaderSection.style.display = "block";
+  function capitalizeWords(str) {
+    return str
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  }
 
-            document.title = `${serviceName} - ${company.name}`;
-            document.querySelector(
-              'meta[name="description"]'
-            ).content = `${serviceName} için profesyonel, garantili ve hızlı teknik servis hizmeti.`;
-            document.querySelector(
-              'meta[name="keywords"]'
-            ).content = `${serviceName}, ${serviceName} tamiri, ${serviceName} bakımı, ${company.name}`;
+  if (!serviceParam || serviceParam.trim() === "") {
+    serviceNotFoundDiv.style.display = "block";
+    serviceContentDiv.style.display = "none";
+    serviceHeaderSection.style.display = "none";
+    document.title = "Hizmet Bulunamadı - " + company.name;
+    populateNotFoundServices();
+    if (breadcrumbService) {
+      breadcrumbService.textContent = "Hizmet Bulunamadı";
+    }
+  } else {
+    const serviceName = decodeURIComponent(serviceParam);
+    const serviceNameCapitalized = capitalizeWords(serviceName);
 
-            document.getElementById("service-title").textContent = serviceName;
-            document.getElementById(
-              "service-hero-desc"
-            ).textContent = `Garantisi bitmiş ${serviceName.toLowerCase()} cihazlarınız için profesyonel servis hizmetleri.`;
+    serviceNotFoundDiv.style.display = "none";
+    serviceContentDiv.style.display = "block";
+    serviceHeaderSection.style.display = "block";
 
-            if (breadcrumbService) {
-              breadcrumbService.textContent = serviceName;
-            }
+    document.title = `${serviceNameCapitalized} - ${company.name}`;
+    document.querySelector('meta[name="description"]').content = `${serviceNameCapitalized} için profesyonel, garantili ve hızlı teknik servis hizmeti.`;
+    document.querySelector('meta[name="keywords"]').content = `${serviceNameCapitalized}, ${serviceNameCapitalized} tamiri, ${serviceNameCapitalized} bakımı, ${company.name}`;
 
-            const dynamicSchemaElement =
-              document.getElementById("dynamic-schema");
-            if (dynamicSchemaElement) {
-              try {
-                const schema = JSON.parse(dynamicSchemaElement.textContent);
-                schema.serviceType = serviceName;
-                if (schema.mainEntity) {
-                  schema.mainEntity.name = serviceName;
-                  schema.mainEntity.description = `Garantisi bitmiş ${serviceName.toLowerCase()} cihazlarınız için profesyonel servis hizmetleri.`;
-                }
-                dynamicSchemaElement.textContent = JSON.stringify(
-                  schema,
-                  null,
-                  2
-                );
-              } catch (e) {
-                console.error("Dinamik schema güncellenirken hata oluştu:", e);
-              }
-            }
-          }
+    document.getElementById("service-title").textContent = serviceNameCapitalized;
+    document.getElementById("service-hero-desc").textContent = `${serviceNameCapitalized} - #1 Kalite İşçilik Hemen Arayın Güvenilir ve Hijyenik Servis Uzmanlardan Hızlı Çözüm!`;
+
+    if (breadcrumbService) {
+      breadcrumbService.textContent = serviceNameCapitalized;
+    }
+
+    const dynamicSchemaElement = document.getElementById('dynamic-schema');
+    if (dynamicSchemaElement) {
+      try {
+        const schema = JSON.parse(dynamicSchemaElement.textContent);
+        schema.serviceType = serviceNameCapitalized;
+        if (schema.mainEntity) {
+          schema.mainEntity.name = serviceNameCapitalized;
+          schema.mainEntity.description = `Garantisi bitmiş ${serviceNameCapitalized} cihazlarınız için profesyonel servis hizmetleri.`;
         }
+        dynamicSchemaElement.textContent = JSON.stringify(schema, null, 2);
+      } catch (e) {
+        console.error("Dinamik schema güncellenirken hata oluştu:", e);
+      }
+    }
+  }
+}
+
 
         // "Bulunamadı" bölümündeki hizmet listesini doldurur
         function populateNotFoundServices() {
-          const listContainer = document.getElementById(
-            "notfound-services-list"
-          );
+          const listContainer = document.getElementById("notfound-services-list");
           if (!listContainer) return;
 
           const services = [
@@ -2033,10 +1894,7 @@
                     <a href="hizmet.html?service=${encodeURIComponent(
                       name
                     )}">Detaylı Bilgi</a>
-                    <a href="tel:${company.phone.replace(
-                      /\s+/g,
-                      ""
-                    )}">Hemen Ara</a>
+                    <a href="tel:${company.phone.replace(/\s+/g, '')}">Hemen Ara</a>
                   </div>
                 </div>
             `
@@ -2045,26 +1903,24 @@
         }
 
         // SSS (FAQ) Bölümü Fonksiyonelliği
-        document.querySelectorAll(".faq-question-custom").forEach((btn) => {
-          btn.addEventListener("click", function () {
-            this.classList.toggle("active");
+        document.querySelectorAll('.faq-question-custom').forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.classList.toggle('active');
             const answer = this.nextElementSibling;
-            if (this.classList.contains("active")) {
-              answer.style.maxHeight = answer.scrollHeight + "px";
-              answer.style.padding = "18px 22px";
+            if (this.classList.contains('active')) {
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+              answer.style.padding = '18px 22px';
             } else {
               answer.style.maxHeight = null;
-              answer.style.padding = "0 22px";
+              answer.style.padding = '0 22px';
             }
-            document
-              .querySelectorAll(".faq-question-custom")
-              .forEach((otherBtn) => {
-                if (otherBtn !== this) {
-                  otherBtn.classList.remove("active");
-                  otherBtn.nextElementSibling.style.maxHeight = null;
-                  otherBtn.nextElementSibling.style.padding = "0 22px";
-                }
-              });
+            document.querySelectorAll('.faq-question-custom').forEach(otherBtn => {
+              if (otherBtn !== this) {
+                otherBtn.classList.remove('active');
+                otherBtn.nextElementSibling.style.maxHeight = null;
+                otherBtn.nextElementSibling.style.padding = '0 22px';
+              }
+            });
           });
         });
 
