@@ -12,6 +12,7 @@
       name="keywords"
       content="kvkk, kişisel verilerin korunması, veri işleme politikası, beyaz eşya servisi kvkk, veri toplama, gizlilik"
     />
+    <!-- Favicon bağlantıları eklendi -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -296,6 +297,16 @@
         margin-bottom: 40px;
       }
 
+      .footer-column {
+        text-align: left; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .footer-column {
+          text-align: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
       .footer-column h3 {
         font-size: 1.2rem;
         margin-bottom: 20px;
@@ -345,6 +356,30 @@
         vertical-align: middle;
         margin-right: 8px;
         fill: var(--accent-color);
+      }
+
+      /* Sosyal Medya İkonları */
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: flex-start; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .social-icons {
+          justify-content: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 1.5em;
+        transition: color 0.2s;
+      }
+
+      .social-icons a:hover {
+        color: var(--accent-color);
       }
 
       #footer-disclaimer {
@@ -466,11 +501,11 @@
       .sticky-call-cta {
         position: fixed;
         left: 50%;
-        bottom: 20px;
+        bottom: 20px; /* Butonu alta yaklaştırdık */
         transform: translateX(-50%);
         z-index: 9999;
-        background: #009540;
-        color: #fff;
+        background: var(--primary-color); /* Updated for consistency */
+        color: #000; /* Updated for contrast */
         font-weight: 700;
         font-size: 1.3rem;
         border-radius: 999px;
@@ -493,11 +528,13 @@
       }
       .sticky-call-cta svg {
         flex-shrink: 0;
-        color: #fff;
+        color: #000; /* Updated for contrast */
+        vertical-align: middle; /* İkonu metinle hizala */
+        margin-right: 8px; /* İkon ile metin arasına boşluk */
       }
       .sticky-call-cta:hover,
       .sticky-call-cta:focus {
-        background: #007a36;
+        background: var(--secondary-color);
         text-decoration: none;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.13);
         transform: translateX(-50%) scale(1.03);
@@ -506,7 +543,7 @@
         .sticky-call-cta {
           font-size: 1rem;
           padding: 0.6em 0.9em 0.6em 0.8em;
-          bottom: 15px;
+          bottom: 15px; /* Mobil için daha da alta yaklaştırdık */
         }
         .sticky-call-cta span {
           font-size: 1em;
@@ -522,7 +559,7 @@
         "sirketAdi": "Teknik Servis A.Ş.",
         "phone": "0850 123 45 67",
         "email": "example@gmail.com",
-        "url": "https://exampleteknikservis.com",
+        "url": "https://teknik-servis-html.vercel.app",
         "adres": "Mersin, Türkiye",
         "vergiNo": "1234567890"
       }
@@ -784,7 +821,7 @@
           >
             <span style="font-weight: 500">Sosyal Medya:</span>
             <a
-              href="https://www.facebook.com/sharer/sharer.php?u=https://exampleteknikservis.com/kvkk.html"
+              href="https://www.facebook.com/sharer/sharer.php?u=https://teknik-servis-html.vercel.app/kvkk.html"
               target="_blank"
               rel="noopener"
               title="Facebook'ta Paylaş"
@@ -802,7 +839,7 @@
               </svg>
             </a>
             <a
-              href="https://twitter.com/intent/tweet?url=https://exampleteknikservis.com/kvkk.html&amp;text=KVKK%20Aydınlatma%20Metni"
+              href="https://twitter.com/intent/tweet?url=https://teknik-servis-html.vercel.app/kvkk.html&amp;text=KVKK%20Aydınlatma%20Metni"
               target="_blank"
               rel="noopener"
               title="Twitter'da Paylaş"
@@ -910,6 +947,81 @@
               <li><a href="/hizmet/Televizyon.html">Televizyon Onarımı</a></li>
             </ul>
           </div>
+
+          <!-- Sosyal Medya Sütunu -->
+          <div class="footer-column">
+            <h3>Bizi Takip Edin</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-twitter"
+                >
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-instagram"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <div id="footer-disclaimer">
           <svg
@@ -950,7 +1062,7 @@
           width: 1.4em;
           height: 1.4em;
           vertical-align: middle;
-          margin-right: 12px;
+          margin-right: 8px; /* İkon ile metin arasına boşluk */
           fill: currentColor;
         "
       >
@@ -982,7 +1094,7 @@
           }
         },
         "datePublished": "2025-01-01",
-        "dateModified": "2025-07-22"
+        "dateModified": "2025-07-23"
       }
     </script>
 
@@ -995,13 +1107,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Ana Sayfa",
-            "item": "https://exampleteknikservis.com"
+            "item": "https://teknik-servis-html.vercel.app"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "KVKK Aydınlatma Metni",
-            "item": "https://exampleteknikservis.com/kvkk.html"
+            "item": "https://teknik-servis-html.vercel.app/kvkk.html"
           }
         ]
       }
@@ -1013,7 +1125,7 @@
         "@type": "LocalBusiness",
         "name": "Beyaz Eşya Servisi",
         "image": "img/favicon-32x32.png",
-        "url": "https://exampleteknikservis.com",
+        "url": "https://teknik-servis-html.vercel.app",
         "telephone": "+90 850 123 45 67",
         "address": {
           "@type": "PostalAddress",
@@ -1028,7 +1140,7 @@
           "longitude": 34.6200216
         },
         "sameAs": [
-          "https://exampleteknikservis.com",
+          "https://teknik-servis-html.vercel.app",
           "https://www.facebook.com/exampleteknikservis"
         ]
       }
@@ -1041,10 +1153,10 @@
         "name": "Beyaz Eşya Servisi",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.5",
+          "ratingValue": "4.8",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "100"
+          "ratingCount": "150"
         }
       }
     </script>
@@ -1078,8 +1190,7 @@
         // Şirket Bilgilerini Sayfaya Yerleştirme
         function populateCompanyInfo() {
           document.getElementById("company-name").textContent = company.name;
-          document.getElementById("footer-company-name").textContent =
-            company.name;
+          // document.getElementById("footer-company-name").textContent = company.name; // Bu satır kaldırıldı
           document.getElementById("footer-company-name-copyright").textContent =
             company.name;
 
@@ -1157,6 +1268,8 @@
               schema.address.addressLocality = company.adres
                 .split(",")[0]
                 .trim();
+              schema.url = company.url; // URL'yi company.url'den al
+              schema.sameAs[0] = company.url; // sameAs URL'sini günceller
               localBusinessSchema.textContent = JSON.stringify(schema, null, 2);
             } catch (e) {
               console.error(
@@ -1173,6 +1286,9 @@
             try {
               const schema = JSON.parse(organizationSchema.textContent);
               schema.name = company.name;
+              // index.html ve iletisim.html ile tutarlı hale getirildi
+              schema.aggregateRating.ratingValue = "4.8";
+              schema.aggregateRating.ratingCount = "150";
               organizationSchema.textContent = JSON.stringify(schema, null, 2);
             } catch (e) {
               console.error(
