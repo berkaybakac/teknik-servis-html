@@ -336,7 +336,7 @@
 
       /* Footer */
       footer {
-        background-color: var(--footer-bg);
+        background-color: #0d0d0d; /* index.html ile tutarlı */
         color: var(--footer-text);
         padding: 50px 0 20px;
         position: relative;
@@ -350,9 +350,19 @@
         margin-bottom: 40px;
       }
 
+      .footer-column {
+        text-align: left; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .footer-column {
+          text-align: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
       .footer-column h3 {
         font-size: 1.2rem;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         color: #fff;
         position: relative;
       }
@@ -388,7 +398,7 @@
         opacity: 0.8;
       }
 
-      /* Footer ikon boyutu */
+      /* Footer ikon boyut düzeltme */
       footer .footer-column svg {
         width: 1.2em;
         height: 1.2em;
@@ -401,14 +411,38 @@
         fill: var(--accent-color);
       }
 
+      /* Sosyal Medya İkonları */
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: flex-start; /* Varsayılan olarak sola hizalı */
+      }
+
+      @media (max-width: 768px) {
+        .social-icons {
+          justify-content: center; /* Mobil ve tabletlerde ortala */
+        }
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 1.5em;
+        transition: color 0.2s;
+      }
+
+      .social-icons a:hover {
+        color: var(--accent-color);
+      }
+
       #footer-disclaimer {
         text-align: center;
-        background: #1e1e23; /* Index.html ile uyumlu */
+        background: #1e1e23;
         color: #fff;
         font-size: 0.9em;
         padding: 15px;
         border-radius: 4px;
-        border: none; /* Index.html ile uyumlu */
+        border: none;
         margin-top: 30px;
       }
 
@@ -416,7 +450,7 @@
         text-align: center;
         padding-top: 20px;
         margin-top: 30px;
-        border-top: 1px solid #222; /* Index.html ile uyumlu */
+        border-top: 1px solid #222;
         font-size: 0.9em;
         color: var(--footer-text);
         opacity: 0.7;
@@ -584,7 +618,11 @@
         "url": "https://teknik-servis-html.vercel.app",
         "adres": "Mersin, Türkiye",
         "vergiNo": "1234567890",
-        "foundingDate": "2010"
+        "foundingDate": "2010",
+        "calismaSaatleri": "Haftaiçi 09:00 - 18:00",
+        "kvkkUrl": "/kvkk.html",
+        "cerezPolitikasiUrl": "/cerez-politikasi.html",
+        "garantiPolitikasiUrl": "/garanti-politikasi.html"
       }
     </script>
 
@@ -813,6 +851,7 @@
       </div>
     </section>
 
+    <!-- Footer Bölümü -->
     <footer>
       <div class="container">
         <div class="footer-content">
@@ -861,6 +900,42 @@
                   >example@gmail.com</a
                 >
               </li>
+              <!-- "İlgili Kaynaklar" kısmı kaldırıldı -->
+            </ul>
+          </div>
+
+          <!-- Site Haritası Sütunu -->
+          <div class="footer-column">
+            <h3>Site Haritası</h3>
+            <ul>
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+              <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+          </div>
+
+          <!-- Popüler Hizmetler Sütunu -->
+          <div class="footer-column">
+            <h3>Popüler Hizmetler</h3>
+            <ul>
+              <li>
+                <a href="/hizmet/Beyaz-Eşya-Servisi.html">Beyaz Eşya Tamiri</a>
+              </li>
+              <li>
+                <a href="/hizmet/Buzdolabı-Tamiri.html">Buzdolabı Tamiri</a>
+              </li>
+              <li>
+                <a href="/hizmet/Çamaşır-Makinesi.html">Çamaşır Makinesi</a>
+              </li>
+              <li>
+                <a href="/hizmet/Bulaşık-Makinesi.html">Bulaşık Makinesi</a>
+              </li>
+              <li><a href="/hizmet/Fırın-Tamiri.html">Fırın Tamiri</a></li>
+              <li><a href="/hizmet/Klima.html">Klima Servisi</a></li>
+              <li><a href="/hizmet/Kombi.html">Kombi Bakımı</a></li>
+              <li><a href="/hizmet/Televizyon.html">Televizyon Onarımı</a></li>
             </ul>
           </div>
 
@@ -1108,8 +1183,7 @@
           document.getElementById("company-name").textContent = company.name;
           // Kaldırılan satır: document.getElementById("footer-company-name").textContent = company.name;
           document.getElementById("footer-company-name-copyright").textContent =
-            company.name;
-          // Kaldırılan satır: document.getElementById("company-description").textContent = company.sirketAdi + " olarak müşteri memnuniyetini ön planda tutuyoruz.";
+            company.sirketAdi; // Şirket adı copyright için güncellendi
 
           // Hakkımızda metni içindeki dinamik alanları güncelle
           const aboutCompanyName1 = document.getElementById(
