@@ -37,7 +37,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       :root {
         --primary-color: #009e3c;
         --secondary-color: #007a36;
@@ -49,7 +48,6 @@
         --footer-text: #fff;
         --dark-card-bg: #1a1a1a;
       }
-
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -58,33 +56,28 @@
         background-color: #000;
         font-size: 16px;
         overflow-x: hidden;
-        font-display: swap; /* Font yüklenene kadar ani kaymayı önlemek için */
+        font-display: swap;
       }
-
       .container {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
       }
-
       img {
         max-width: 100%;
         height: auto;
       }
-
       a,
       a:visited {
         color: var(--primary-color);
         text-decoration: none;
         transition: color 0.2s;
       }
-
       a:hover {
         color: var(--secondary-color);
         text-decoration: underline;
       }
-
       /* Tipografi */
       h1,
       h2,
@@ -93,7 +86,6 @@
         line-height: 1.2;
         color: var(--text-color);
       }
-
       h1 {
         font-size: 2.5rem;
       }
@@ -106,7 +98,6 @@
       p {
         margin-bottom: 1rem;
       }
-
       /* Header ve Navigasyon */
       header {
         background-color: #000;
@@ -115,26 +106,22 @@
         top: 0;
         z-index: 1000;
       }
-
       .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 0;
       }
-
       .logo a {
         font-size: 1.6rem;
         font-weight: bold;
         color: #fff;
       }
-
       .main-nav ul {
         list-style: none;
         display: flex;
         gap: 5px;
       }
-
       .main-nav a {
         display: block;
         padding: 10px 15px;
@@ -143,12 +130,10 @@
         transition: background-color 0.2s, color 0.2s;
         color: #fff;
       }
-
       .main-nav a:hover {
         background-color: var(--light-bg);
         color: #fff;
       }
-
       .dropdown-content {
         display: none;
         position: absolute;
@@ -159,15 +144,12 @@
         border-radius: 4px;
         border: 1px solid var(--border-color);
       }
-
       .dropdown:hover .dropdown-content {
         display: block;
       }
-
       .mobile-nav-toggle {
         display: none;
       }
-
       /* Butonlar */
       .btn,
       .btn-accent,
@@ -183,7 +165,6 @@
         background-color: #000;
         color: #fff;
       }
-
       .btn:hover,
       .btn-accent:hover,
       .btn-outline:hover {
@@ -191,28 +172,23 @@
         background-color: #fff;
         color: #000;
       }
-
       .btn-accent {
         background-color: var(--accent-color);
         color: white;
       }
-
       .btn-accent:hover {
         background-color: #e68900;
         color: white;
       }
-
       .btn-outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff;
       }
-
       .btn-outline:hover {
         background-color: #fff;
         color: #000;
       }
-
       /* Hero Bölümü */
       .hero {
         text-align: center;
@@ -220,23 +196,19 @@
         background-color: #000;
         color: #fff;
       }
-
       .hero-buttons {
         margin-top: 25px;
         margin-bottom: 0 !important;
       }
-
       /* Genel Bölümler */
       .section {
         padding: 50px 0;
         background-color: #000;
       }
-
       .section-title {
         text-align: center;
         margin-bottom: 40px;
       }
-
       .section-title::after,
       h1::after,
       h2::after,
@@ -246,14 +218,12 @@
         background-color: transparent;
         content: none;
       }
-
       /* Servis Kartları */
       .service-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 25px;
       }
-
       .card {
         border: 1px solid var(--border-color);
         border-radius: 8px;
@@ -265,30 +235,25 @@
         background: #000;
         color: #fff;
       }
-
       .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
-
       .card-body {
         padding: 25px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
       }
-
       .card-body p {
         flex-grow: 1;
         margin-bottom: 20px;
       }
-
       .card-title {
         font-size: 1.25rem;
         margin-bottom: 15px;
         color: #fff;
       }
-
       /* Müşteri Yorumları */
       .review-section-title {
         text-align: center;
@@ -296,7 +261,6 @@
         color: #fff;
         font-size: 2rem;
       }
-
       .review-list-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -304,7 +268,6 @@
         max-width: 900px;
         margin: 0 auto;
       }
-
       .review-card-custom {
         background: var(--dark-card-bg);
         border: 1px solid #333;
@@ -317,21 +280,18 @@
         justify-content: space-between;
         min-height: 150px;
       }
-
       .review-card-custom .rating-stars {
         color: #ffc107;
         font-size: 1.2rem;
         margin-bottom: 10px;
         text-align: center;
       }
-
       .review-card-custom p {
         font-size: 1em;
         line-height: 1.5;
         margin-bottom: 15px;
         text-align: center;
       }
-
       .review-card-custom .review-author {
         font-size: 0.9em;
         color: #bbb;
@@ -339,7 +299,6 @@
         font-style: normal;
         margin-top: auto;
       }
-
       /* Sıkça Sorulan Sorular (SSS) */
       .faq-section-title {
         text-align: center;
@@ -348,12 +307,10 @@
         color: #fff;
         font-size: 2rem;
       }
-
       .faq-list-custom {
         max-width: 900px;
         margin: 0 auto;
       }
-
       .faq-item-custom {
         margin-bottom: 15px;
         background: var(--dark-card-bg);
@@ -361,7 +318,6 @@
         border-radius: 8px;
         overflow: hidden;
       }
-
       .faq-question-custom {
         width: 100%;
         text-align: left;
@@ -378,20 +334,16 @@
         align-items: center;
         transition: background 0.2s;
       }
-
       .faq-question-custom:hover {
         background-color: #2a2a2a;
       }
-
       .faq-question-custom .icon {
         font-size: 1.2em;
         transition: transform 0.3s ease;
       }
-
       .faq-question-custom.active .icon {
         transform: rotate(180deg);
       }
-
       .faq-answer-custom {
         max-height: 0;
         overflow: hidden;
@@ -400,12 +352,10 @@
         padding: 0 22px;
         color: #ddd;
       }
-
       .faq-question-custom.active + .faq-answer-custom {
         max-height: 500px;
         padding: 18px 22px;
       }
-
       /* Footer */
       footer {
         background-color: #0d0d0d;
@@ -414,62 +364,51 @@
         position: relative;
         padding-bottom: 100px;
       }
-
       .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 40px;
         margin-bottom: 40px;
       }
-
       .footer-column {
         text-align: left;
       }
-
       @media (max-width: 768px) {
         .footer-column {
           text-align: center;
         }
       }
-
       .footer-column h3 {
         font-size: 1.2rem;
         margin-bottom: 20px;
         color: #fff;
         position: relative;
       }
-
       .footer-column h3::after {
         display: none;
         background: none;
         content: none;
       }
-
       .footer-column ul {
         list-style: none;
         padding: 0;
       }
-
       .footer-column ul li {
         margin-bottom: 10px;
       }
-
       .footer-column a {
         color: var(--footer-text);
         opacity: 0.8;
         transition: opacity 0.2s;
       }
-
       .footer-column a:hover {
         opacity: 1;
         color: var(--accent-color);
         text-decoration: underline;
       }
-
       .footer-column p {
         opacity: 0.8;
       }
-
       /* Footer ikon boyut düzeltme */
       footer .footer-column svg {
         width: 1.2em;
@@ -482,7 +421,6 @@
         margin-right: 8px;
         fill: var(--accent-color);
       }
-
       /* Sosyal Medya İkonları */
       .social-icons {
         display: flex;
@@ -490,23 +428,19 @@
         margin-top: 20px;
         justify-content: flex-start;
       }
-
       @media (max-width: 768px) {
         .social-icons {
           justify-content: center;
         }
       }
-
       .social-icons a {
         color: #fff;
         font-size: 1.5em;
         transition: color 0.2s;
       }
-
       .social-icons a:hover {
         color: var(--accent-color);
       }
-
       #footer-disclaimer {
         text-align: center;
         background: #1e1e23;
@@ -517,7 +451,6 @@
         border: none;
         margin-top: 30px;
       }
-
       .copyright {
         text-align: center;
         padding-top: 20px;
@@ -527,17 +460,14 @@
         color: var(--footer-text);
         opacity: 0.7;
       }
-
       .copyright a {
         color: var(--footer-text);
         font-weight: bold;
       }
-
       .copyright a:hover {
         color: var(--accent-color);
         text-decoration: underline;
       }
-
       /* Utility Classes */
       @keyframes pulse {
         0% {
@@ -550,14 +480,12 @@
           transform: scale(1);
         }
       }
-
       .text-center {
         text-align: center;
       }
       .mb-2 {
         margin-bottom: 1rem;
       }
-
       /* Responsive Design */
       @media (max-width: 768px) {
         h1 {
@@ -569,15 +497,12 @@
         h3 {
           font-size: 1.5rem;
         }
-
         .breadcrumb {
           display: none;
         }
-
         .header-content {
           position: relative;
         }
-
         .mobile-nav-toggle {
           display: block;
           background: none;
@@ -586,7 +511,6 @@
           cursor: pointer;
           color: #fff;
         }
-
         .main-nav {
           display: none;
           position: absolute;
@@ -597,42 +521,34 @@
           border-top: 1px solid var(--border-color);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-
         .main-nav.show {
           display: block;
         }
-
         .main-nav ul {
           flex-direction: column;
           padding: 10px;
         }
-
         .dropdown:hover .dropdown-content {
           display: none;
         }
-
         .dropdown.open .dropdown-content {
           display: block;
           position: static;
           box-shadow: none;
           border: none;
         }
-
         .section {
           padding: 40px 0;
         }
-
         .footer-content {
           grid-template-columns: 1fr;
           text-align: center;
         }
-
         .footer-column h3::after {
           left: 50%;
           transform: translateX(-50%);
         }
       }
-
       /* Service Badges */
       .service-badges {
         display: flex;
@@ -689,7 +605,6 @@
           height: 1.5em !important;
         }
       }
-
       .service-extra-info {
         border-radius: 0 0 18px 18px;
         padding: 18px 0 18px 0;
@@ -699,13 +614,11 @@
         margin-bottom: 20px;
         flex-direction: row;
       }
-
       @media (min-width: 768px) {
         .service-stars {
           display: none;
         }
       }
-
       @media (max-width: 768px) {
         .service-stars {
           display: flex;
@@ -716,7 +629,6 @@
           margin: 0;
         }
       }
-
       .service-stars .star {
         color: #ffc107;
         font-size: 2rem;
@@ -725,7 +637,6 @@
         display: flex;
         align-items: center;
       }
-
       .service-stars .rating-box {
         background: #ededed;
         color: #222;
@@ -740,7 +651,6 @@
         justify-content: center;
         box-shadow: none;
       }
-
       .service-stars .reviewer-name-box {
         background: #ffc107;
         color: #222;
@@ -754,7 +664,6 @@
         justify-content: center;
         box-shadow: none;
       }
-
       @media (max-width: 768px) {
         .service-extra-info {
           flex-direction: column;
@@ -766,7 +675,6 @@
           justify-content: center;
         }
       }
-
       /* Dynamic text visibility */
       h1,
       .hero h1,
@@ -777,7 +685,6 @@
       .hero #service-hero-desc {
         color: #fff;
       }
-
       /* Hide user review elements */
       .service-stars,
       .rating-box,
@@ -786,7 +693,6 @@
       .review-card .rating {
         display: none !important;
       }
-
       /* Adjust section spacing */
       .service-badges {
         margin-top: 0px !important;
@@ -801,18 +707,16 @@
       .section {
         padding-top: 0px !important;
       }
-
       /* Breadcrumb color */
       .container.mt-2.mb-2 nav.breadcrumb ol {
         color: #ddd;
       }
-
       .notfound-services-list-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 18px;
         margin-top: 18px;
-        min-height: 300px; /* CLS'yi azaltmak için minimum yükseklik */
+        min-height: 300px;
       }
       @media (min-width: 600px) {
         .notfound-services-list-grid {
@@ -869,7 +773,6 @@
       .notfound-service-btns a:hover {
         opacity: 0.9;
       }
-
       /* Article Content Styles */
       .makale-icerik {
         background: #000;
@@ -899,7 +802,6 @@
       .makale-icerik p {
         margin-bottom: 1.4rem;
       }
-
       /* Sticky Call CTA */
       .sticky-call-cta {
         position: fixed;
@@ -947,7 +849,6 @@
         .sticky-call-cta {
           font-size: 1rem;
           padding: 0.6em 0.9em 0.6em 0.8em;
-          bottom: 15px;
         }
         .sticky-call-cta span {
           font-size: 1em;
@@ -1109,24 +1010,37 @@
           servis hizmetleri.
         </p>
         <div class="hero-buttons">
-          <div style="display: flex; justify-content: center; margin: 32px 0;">
-            <a href="tel:08501234567" id="hero-call-btn" style="
-              display: flex;
-              align-items: center;
-              gap: 12px;
-              background: #066b32;
-              color: #fff;
-              font-weight: 600;
-              font-size: 1.4rem;
-              border: none;
-              border-radius: 22px;
-              padding: 16px 36px;
-              text-decoration: none;
-              box-shadow: none;
-              transition: background 0.2s;
-            ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24">
-                <path fill="#fff" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .22 2.07.34 3.18.34a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.12 2.18.34 3.18a1 1 0 01-.27.91l-2.2 2.2z"/>
+          <div style="display: flex; justify-content: center; margin: 32px 0">
+            <a
+              href="tel:08501234567"
+              id="hero-call-btn"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: #066b32;
+                color: #fff;
+                font-weight: 600;
+                font-size: 1.4rem;
+                border: none;
+                border-radius: 22px;
+                padding: 16px 36px;
+                text-decoration: none;
+                box-shadow: none;
+                transition: background 0.2s;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#fff"
+                  d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .22 2.07.34 3.18.34a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.12 2.18.34 3.18a1 1 0 01-.27.91l-2.2 2.2z"
+                />
               </svg>
               Hemen Servis Çağır
             </a>
@@ -1142,27 +1056,72 @@
         </div>
         <div class="service-badges">
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#009e3c"/><path d="M352 320c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24z" fill="#fff"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <circle cx="256" cy="256" r="256" fill="#009e3c" />
+              <path
+                d="M352 320c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24zm-96 0c-13.3 0-24-10.7-24-24v-56c0-13.3 10.7-24 24-24s24 10.7 24 24v56c0 13.3-10.7 24-24 24z"
+                fill="#fff"
+              />
+            </svg>
             7/24 Hizmet
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="#009e3c">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
+              </g>
+            </svg>
             1 Yıl Garanti
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="#009e3c">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M12 6v6l4 2"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </g>
+            </svg>
             20 Dakika
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#009e3c"/><circle cx="12" cy="10" r="3" fill="#fff"/><path d="M8 16c0-2.2 3.6-2.2 3.6 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#009e3c" />
+              <circle cx="12" cy="10" r="3" fill="#fff" />
+              <path
+                d="M8 16c0-2.2 3.6-2.2 3.6 0"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
             %100 Mutluluk
           </span>
+
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><rect x="2" y="7" width="20" height="10" rx="2"/><circle cx="7" cy="12" r="1" fill="#fff"/><circle cx="17" cy="12" r="1" fill="#fff"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="#009e3c">
+                <rect x="2" y="7" width="20" height="10" rx="2" />
+                <circle cx="7" cy="12" r="1" fill="#fff" />
+                <circle cx="17" cy="12" r="1" fill="#fff" />
+              </g>
+            </svg>
             En Ucuz
           </span>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#009e3c"><path d="M12 2l7 7-7 13-7-13z"/><circle cx="12" cy="9" r="2" fill="#fff"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="#009e3c">
+                <path d="M12 2l7 7-7 13-7-13z" />
+                <circle cx="12" cy="9" r="2" fill="#fff" />
+              </g>
+            </svg>
             %100 Güvenilir
           </span>
         </div>
@@ -1183,7 +1142,8 @@
       "
     >
       <p style="margin-top: 6px; font-size: 0.93em; color: #bbb">
-        Sunduğumuz profesyonel teknik servis hizmetlerimiz aşağıda listelenmiştir.
+        Sunduğumuz profesyonel teknik servis hizmetlerimiz aşağıda
+        listelenmiştir.
       </p>
       <div
         id="notfound-services-list"
@@ -1202,62 +1162,98 @@
                 <div class="review-list-grid">
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>İlk defa bu kadar hızlı ve düzgün bir servis aldım. Geldikleri gibi sorunu çözdüler.</p>
+                    <p>
+                      İlk defa bu kadar hızlı ve düzgün bir servis aldım.
+                      Geldikleri gibi sorunu çözdüler.
+                    </p>
                     <div class="review-author">– Ayşe K.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Kombi bakımı zamanında yapıldı. Teknisyen oldukça kibar ve açıklayıcıydı. Tavsiye ederim.</p>
+                    <p>
+                      Kombi bakımı zamanında yapıldı. Teknisyen oldukça kibar ve
+                      açıklayıcıydı. Tavsiye ederim.
+                    </p>
                     <div class="review-author">– Mehmet D.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>Buzdolabımız çalışmıyordu, ertesi gün gelip tamir ettiler. Artık çok sessiz çalışıyor.</p>
+                    <p>
+                      Buzdolabımız çalışmıyordu, ertesi gün gelip tamir ettiler.
+                      Artık çok sessiz çalışıyor.
+                    </p>
                     <div class="review-author">– Emre S.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Servis biraz geç geldi ama işi düzgün yaptı. Fiyatlar makul.</p>
+                    <p>
+                      Servis biraz geç geldi ama işi düzgün yaptı. Fiyatlar
+                      makul.
+                    </p>
                     <div class="review-author">– Derya U.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>Fırın tamiri için başvurduk. Parça değişimi gerekti ama her aşamada bilgilendirildik. Memnun kaldık.</p>
+                    <p>
+                      Fırın tamiri için başvurduk. Parça değişimi gerekti ama
+                      her aşamada bilgilendirildik. Memnun kaldık.
+                    </p>
                     <div class="review-author">– Zeynep T.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Çamaşır makinemiz artık ses yapmıyor. Detaylı bakım yapıldı.</p>
+                    <p>
+                      Çamaşır makinemiz artık ses yapmıyor. Detaylı bakım
+                      yapıldı.
+                    </p>
                     <div class="review-author">– Burak A.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>Telefonla ulaşmak kolaydı. Hızlıca randevu verip aynı gün geldiler.</p>
+                    <p>
+                      Telefonla ulaşmak kolaydı. Hızlıca randevu verip aynı gün
+                      geldiler.
+                    </p>
                     <div class="review-author">– Seda Y.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>İletişimden montaja kadar süreç çok profesyoneldi. Klimamız yeniden çalışıyor, teşekkürler.</p>
+                    <p>
+                      İletişimden montaja kadar süreç çok profesyoneldi.
+                      Klimamız yeniden çalışıyor, teşekkürler.
+                    </p>
                     <div class="review-author">– Onur B.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Televizyon ekranında çizgi çıkıyordu. Kısa sürede tamir ettiler. Uygun fiyatlıydı.</p>
+                    <p>
+                      Televizyon ekranında çizgi çıkıyordu. Kısa sürede tamir
+                      ettiler. Uygun fiyatlıydı.
+                    </p>
                     <div class="review-author">– Nazlı E.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★★</div>
-                    <p>Hem müşteri ilişkileri hem de teknik bilgi açısından çok memnun kaldık.</p>
+                    <p>
+                      Hem müşteri ilişkileri hem de teknik bilgi açısından çok
+                      memnun kaldık.
+                    </p>
                     <div class="review-author">– Gökhan R.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Daha önce başka bir firmayla sorun yaşamıştık ama Teknik Servis çok güven verdi.</p>
+                    <p>
+                      Daha önce başka bir firmayla sorun yaşamıştık ama Teknik
+                      Servis çok güven verdi.
+                    </p>
                     <div class="review-author">– Elif Ç.</div>
                   </div>
                   <div class="review-card-custom">
                     <div class="rating-stars">★★★★☆</div>
-                    <p>Montaj sonrası küçük bir sorun yaşadık, ama arayınca hemen gelip düzelttiler.</p>
+                    <p>
+                      Montaj sonrası küçük bir sorun yaşadık, ama arayınca hemen
+                      gelip düzelttiler.
+                    </p>
                     <div class="review-author">– Kemal T.</div>
                   </div>
                 </div>
@@ -1271,7 +1267,12 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>Servis ücretlerimiz arızanın türüne, cihazın modeline ve gerekli yedek parça ihtiyacına göre belirlenmektedir. Fiyatlandırma konusunda her zaman şeffaf davranıyor, işlem öncesi sizi bilgilendiriyoruz.</p>
+                      <p>
+                        Servis ücretlerimiz arızanın türüne, cihazın modeline ve
+                        gerekli yedek parça ihtiyacına göre belirlenmektedir.
+                        Fiyatlandırma konusunda her zaman şeffaf davranıyor,
+                        işlem öncesi sizi bilgilendiriyoruz.
+                      </p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1280,7 +1281,11 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>Müsaitlik durumuna göre aynı gün içerisinde servis hizmeti sağlanabilir. Erken saatlerde randevu almanız tavsiye edilir.</p>
+                      <p>
+                        Müsaitlik durumuna göre aynı gün içerisinde servis
+                        hizmeti sağlanabilir. Erken saatlerde randevu almanız
+                        tavsiye edilir.
+                      </p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1289,7 +1294,10 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>Tüm servis işlemlerimiz 1 yıl garantilidir. Aynı arıza tekrar ederse, ücretsiz destek sunulmaktadır.</p>
+                      <p>
+                        Tüm servis işlemlerimiz 1 yıl garantilidir. Aynı arıza
+                        tekrar ederse, ücretsiz destek sunulmaktadır.
+                      </p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1298,7 +1306,11 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>Kullandığımız tüm parçalar orijinal ve garantilidir. Talebiniz doğrultusunda muadil ürün seçeneği de sunabiliriz.</p>
+                      <p>
+                        Kullandığımız tüm parçalar orijinal ve garantilidir.
+                        Talebiniz doğrultusunda muadil ürün seçeneği de
+                        sunabiliriz.
+                      </p>
                     </div>
                   </div>
                   <div class="faq-item-custom">
@@ -1307,29 +1319,58 @@
                       <span class="icon">▼</span>
                     </button>
                     <div class="faq-answer-custom">
-                      <p>Arçelik, Beko, Bosch, Siemens, Samsung, LG, Vestel, Altus, Profilo ve birçok farklı markaya Teknik Servis olarak teknik hizmet sunuyoruz.</p>
+                      <p>
+                        Arçelik, Beko, Bosch, Siemens, Samsung, LG, Vestel,
+                        Altus, Profilo ve birçok farklı markaya Teknik Servis
+                        olarak teknik hizmet sunuyoruz.
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Makale Alanı -->
-                <section class="makale" style="margin-top: 60px;">
+                <section class="makale" style="margin-top: 60px">
                   <div class="makale-icerik">
                     <!-- MAKALE METNİ -->
                     <p>
-                      Beyaz Eşya Servisi: Buzdolabı, Çamaşır Makinesi, Bulaşık Makinesi, Fırın, Klima, Kombi Ve Televizyon İçin Profesyonel Teknik Destek Ve Sık Arıza Çözümleri, evlerimizin vazgeçilmez unsurları olan beyaz eşyaların sorunsuz çalışmasını sağlar. Ev aletleri, günlük yaşamı kolaylaştıran önemli araçlardır; bu nedenle bu aletlerin bakımı ve tamiri oldukça önemlidir. Beyaz eşya teknik servisleri, bu cihazların arızalarını hızlı ve etkili bir şekilde çözer. Böylece, kullanıcılar yaşanan sorunlardan en kısa sürede kurtulur. Ayrıca, klima ve kombi bakım onarımı düzenli yapılmalıdır. Bu durum, enerji verimliliğini artırır ve cihazların ömrünü uzatır.
+                      Beyaz Eşya Servisi: Buzdolabı, Çamaşır Makinesi, Bulaşık
+                      Makinesi, Fırın, Klima, Kombi Ve Televizyon İçin
+                      Profesyonel Teknik Destek Ve Sık Arıza Çözümleri,
+                      evlerimizin vazgeçilmez unsurları olan beyaz eşyaların
+                      sorunsuz çalışmasını sağlar. Ev aletleri, günlük yaşamı
+                      kolaylaştıran önemli araçlardır; bu nedenle bu aletlerin
+                      bakımı ve tamiri oldukça önemlidir. Beyaz eşya teknik
+                      servisleri, bu cihazların arızalarını hızlı ve etkili bir
+                      şekilde çözer. Böylece, kullanıcılar yaşanan sorunlardan
+                      en kısa sürede kurtulur. Ayrıca, klima ve kombi bakım
+                      onarımı düzenli yapılmalıdır. Bu durum, enerji
+                      verimliliğini artırır ve cihazların ömrünü uzatır.
                     </p>
                   </div>
-                  <div class="social-share" style="margin-top: 40px; display: flex; align-items: center; gap: 14px; justify-content: center;">
-                    <span style="font-weight: 500;">Sosyal Medya:</span>
+                  <div
+                    class="social-share"
+                    style="
+                      margin-top: 40px;
+                      display: flex;
+                      align-items: center;
+                      gap: 14px;
+                      justify-content: center;
+                    "
+                  >
+                    <span style="font-weight: 500">Sosyal Medya:</span>
                     <a
                       href="https://twitter.com/intent/tweet?url="
                       target="_blank"
                       rel="noopener"
                       title="Twitter'da Paylaş"
-                      style="display: flex; align-items: center;"
+                      style="display: flex; align-items: center"
                     >
-                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 512 512">
+                      <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        viewBox="0 0 512 512"
+                      >
                         <path
                           d="M459.4 151.7c.32 4.54.32 9.1.32 13.66
                           0 138.72-105.58 298.56-298.56 298.56-59.5
@@ -1356,9 +1397,14 @@
                       target="_blank"
                       rel="noopener"
                       title="Facebook'ta Paylaş"
-                      style="display: flex; align-items: center;"
+                      style="display: flex; align-items: center"
                     >
-                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 320 512">
+                      <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        viewBox="0 0 320 512"
+                      >
                         <path
                           d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35
                           12.42-50.06 52.24-50.06H293V6.26S259.5
@@ -1790,87 +1836,110 @@
             "mailto:" + company.email;
 
           // Sabit Çağrı Butonu (Sticky Call CTA)
-          const stickyCallCtaMain = document.getElementById("sticky-call-cta-main");
+          const stickyCallCtaMain = document.getElementById(
+            "sticky-call-cta-main"
+          );
           if (stickyCallCtaMain) {
-            stickyCallCtaMain.href = "tel:" + company.phone.replace(/\s+/g, '');
+            stickyCallCtaMain.href = "tel:" + company.phone.replace(/\s+/g, "");
             const stickyCallText = stickyCallCtaMain.querySelector("span");
             if (stickyCallText) {
-                stickyCallText.textContent = "Hemen Ara";
+              stickyCallText.textContent = "Hemen Ara";
             }
           }
 
           // Hero bölümündeki çağrı butonu (hero-call-btn)
           const heroCallBtn = document.getElementById("hero-call-btn");
           if (heroCallBtn) {
-            heroCallBtn.href = "tel:" + company.phone.replace(/\s+/g, '');
+            heroCallBtn.href = "tel:" + company.phone.replace(/\s+/g, "");
           }
         }
 
-       // Dinamik Hizmet Sayfası Mantığı
-function handleDynamicServicePage() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const serviceParam = urlParams.get("service");
-  const serviceNotFoundDiv = document.getElementById("service-not-found");
-  const serviceContentDiv = document.querySelector(".service-content");
-  const serviceHeaderSection = document.getElementById("service-header-section");
-  const breadcrumbService = document.querySelector(".breadcrumb-service");
+        // Dinamik Hizmet Sayfası Mantığı
+        function handleDynamicServicePage() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const serviceParam = urlParams.get("service");
+          const serviceNotFoundDiv =
+            document.getElementById("service-not-found");
+          const serviceContentDiv = document.querySelector(".service-content");
+          const serviceHeaderSection = document.getElementById(
+            "service-header-section"
+          );
+          const breadcrumbService = document.querySelector(
+            ".breadcrumb-service"
+          );
 
-  function capitalizeWords(str) {
-    return str
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
-  }
+          function capitalizeWords(str) {
+            return str
+              .split(" ")
+              .map(
+                (word) =>
+                  word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+              )
+              .join(" ");
+          }
 
-  if (!serviceParam || serviceParam.trim() === "") {
-    serviceNotFoundDiv.style.display = "block";
-    serviceContentDiv.style.display = "none";
-    serviceHeaderSection.style.display = "none";
-    document.title = "Hizmet Bulunamadı - " + company.name;
-    populateNotFoundServices();
-    if (breadcrumbService) {
-      breadcrumbService.textContent = "Hizmet Bulunamadı";
-    }
-  } else {
-    const serviceName = decodeURIComponent(serviceParam);
-    const serviceNameCapitalized = capitalizeWords(serviceName);
+          if (!serviceParam || serviceParam.trim() === "") {
+            serviceNotFoundDiv.style.display = "block";
+            serviceContentDiv.style.display = "none";
+            serviceHeaderSection.style.display = "none";
+            document.title = "Hizmet Bulunamadı - " + company.name;
+            populateNotFoundServices();
+            if (breadcrumbService) {
+              breadcrumbService.textContent = "Hizmet Bulunamadı";
+            }
+          } else {
+            const serviceName = decodeURIComponent(serviceParam);
+            const serviceNameCapitalized = capitalizeWords(serviceName);
 
-    serviceNotFoundDiv.style.display = "none";
-    serviceContentDiv.style.display = "block";
-    serviceHeaderSection.style.display = "block";
+            serviceNotFoundDiv.style.display = "none";
+            serviceContentDiv.style.display = "block";
+            serviceHeaderSection.style.display = "block";
 
-    document.title = `${serviceNameCapitalized} - ${company.name}`;
-    document.querySelector('meta[name="description"]').content = `${serviceNameCapitalized} için profesyonel, garantili ve hızlı teknik servis hizmeti.`;
-    document.querySelector('meta[name="keywords"]').content = `${serviceNameCapitalized}, ${serviceNameCapitalized} tamiri, ${serviceNameCapitalized} bakımı, ${company.name}`;
+            document.title = `${serviceNameCapitalized} - ${company.name}`;
+            document.querySelector(
+              'meta[name="description"]'
+            ).content = `${serviceNameCapitalized} için profesyonel, garantili ve hızlı teknik servis hizmeti.`;
+            document.querySelector(
+              'meta[name="keywords"]'
+            ).content = `${serviceNameCapitalized}, ${serviceNameCapitalized} tamiri, ${serviceNameCapitalized} bakımı, ${company.name}`;
 
-    document.getElementById("service-title").textContent = serviceNameCapitalized;
-    document.getElementById("service-hero-desc").textContent = `${serviceNameCapitalized} - #1 Kalite İşçilik Hemen Arayın Güvenilir ve Hijyenik Servis Uzmanlardan Hızlı Çözüm!`;
+            document.getElementById("service-title").textContent =
+              serviceNameCapitalized;
+            document.getElementById(
+              "service-hero-desc"
+            ).textContent = `${serviceNameCapitalized} - #1 Kalite İşçilik Hemen Arayın Güvenilir ve Hijyenik Servis Uzmanlardan Hızlı Çözüm!`;
 
-    if (breadcrumbService) {
-      breadcrumbService.textContent = serviceNameCapitalized;
-    }
+            if (breadcrumbService) {
+              breadcrumbService.textContent = serviceNameCapitalized;
+            }
 
-    const dynamicSchemaElement = document.getElementById('dynamic-schema');
-    if (dynamicSchemaElement) {
-      try {
-        const schema = JSON.parse(dynamicSchemaElement.textContent);
-        schema.serviceType = serviceNameCapitalized;
-        if (schema.mainEntity) {
-          schema.mainEntity.name = serviceNameCapitalized;
-          schema.mainEntity.description = `Garantisi bitmiş ${serviceNameCapitalized} cihazlarınız için profesyonel servis hizmetleri.`;
+            const dynamicSchemaElement =
+              document.getElementById("dynamic-schema");
+            if (dynamicSchemaElement) {
+              try {
+                const schema = JSON.parse(dynamicSchemaElement.textContent);
+                schema.serviceType = serviceNameCapitalized;
+                if (schema.mainEntity) {
+                  schema.mainEntity.name = serviceNameCapitalized;
+                  schema.mainEntity.description = `Garantisi bitmiş ${serviceNameCapitalized} cihazlarınız için profesyonel servis hizmetleri.`;
+                }
+                dynamicSchemaElement.textContent = JSON.stringify(
+                  schema,
+                  null,
+                  2
+                );
+              } catch (e) {
+                console.error("Dinamik schema güncellenirken hata oluştu:", e);
+              }
+            }
+          }
         }
-        dynamicSchemaElement.textContent = JSON.stringify(schema, null, 2);
-      } catch (e) {
-        console.error("Dinamik schema güncellenirken hata oluştu:", e);
-      }
-    }
-  }
-}
-
 
         // "Bulunamadı" bölümündeki hizmet listesini doldurur
         function populateNotFoundServices() {
-          const listContainer = document.getElementById("notfound-services-list");
+          const listContainer = document.getElementById(
+            "notfound-services-list"
+          );
           if (!listContainer) return;
 
           const services = [
@@ -1894,7 +1963,10 @@ function handleDynamicServicePage() {
                     <a href="hizmet.html?service=${encodeURIComponent(
                       name
                     )}">Detaylı Bilgi</a>
-                    <a href="tel:${company.phone.replace(/\s+/g, '')}">Hemen Ara</a>
+                    <a href="tel:${company.phone.replace(
+                      /\s+/g,
+                      ""
+                    )}">Hemen Ara</a>
                   </div>
                 </div>
             `
@@ -1903,24 +1975,26 @@ function handleDynamicServicePage() {
         }
 
         // SSS (FAQ) Bölümü Fonksiyonelliği
-        document.querySelectorAll('.faq-question-custom').forEach(btn => {
-          btn.addEventListener('click', function() {
-            this.classList.toggle('active');
+        document.querySelectorAll(".faq-question-custom").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.classList.toggle("active");
             const answer = this.nextElementSibling;
-            if (this.classList.contains('active')) {
-              answer.style.maxHeight = answer.scrollHeight + 'px';
-              answer.style.padding = '18px 22px';
+            if (this.classList.contains("active")) {
+              answer.style.maxHeight = answer.scrollHeight + "px";
+              answer.style.padding = "18px 22px";
             } else {
               answer.style.maxHeight = null;
-              answer.style.padding = '0 22px';
+              answer.style.padding = "0 22px";
             }
-            document.querySelectorAll('.faq-question-custom').forEach(otherBtn => {
-              if (otherBtn !== this) {
-                otherBtn.classList.remove('active');
-                otherBtn.nextElementSibling.style.maxHeight = null;
-                otherBtn.nextElementSibling.style.padding = '0 22px';
-              }
-            });
+            document
+              .querySelectorAll(".faq-question-custom")
+              .forEach((otherBtn) => {
+                if (otherBtn !== this) {
+                  otherBtn.classList.remove("active");
+                  otherBtn.nextElementSibling.style.maxHeight = null;
+                  otherBtn.nextElementSibling.style.padding = "0 22px";
+                }
+              });
           });
         });
 
