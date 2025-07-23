@@ -638,7 +638,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 48px 64px;
+        gap: 48px 64px; /* Masaüstü için varsayılan */
         margin: 32px 0 32px 0;
         background: none;
         border-radius: 0;
@@ -678,7 +678,7 @@
       }
       @media (max-width: 900px) {
         .service-badges {
-          gap: 24px 24px;
+          gap: 24px 24px; /* Tablet için gap azaltıldı */
         }
         .service-badges span {
           font-size: 1rem;
@@ -689,75 +689,22 @@
           height: 1.5em !important;
         }
       }
+      @media (max-width: 600px) {
+        /* Mobil için ek kırılma noktası */
+        .service-badges {
+          gap: 16px 16px; /* Mobil için daha da azaltıldı */
+        }
+        .service-badges span {
+          font-size: 0.9rem; /* Mobil için font boyutu küçültüldü */
+          min-width: 80px;
+        }
+        .service-badges svg {
+          width: 1.3em !important;
+          height: 1.3em !important;
+        }
+      }
 
       /* service-extra-info bölümü ve service-stars tamamen kaldırıldığı için ilgili CSS de kaldırıldı */
-      /* .service-extra-info {
-        border-radius: 0 0 18px 18px;
-        padding: 18px 0 18px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        flex-direction: row;
-      } */
-
-      /* service-stars tamamen kaldırıldığı için ilgili CSS de kaldırıldı */
-      /* @media (max-width: 768px) {
-        .service-stars {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          background: transparent;
-          padding: 0;
-          margin: 0;
-        }
-      }
-      .service-stars .star {
-        color: #ffc107;
-        font-size: 2rem;
-        margin-right: 12px;
-        letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-      }
-      .service-stars .rating-box {
-        background: #ededed;
-        color: #222;
-        font-weight: 600;
-        border-radius: 8px;
-        padding: 2px 14px;
-        font-size: 1.1rem;
-        margin-right: 8px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: none;
-      }
-      .service-stars .reviewer-name-box {
-        background: #ffc107;
-        color: #222;
-        font-weight: bold;
-        border-radius: 8px;
-        padding: 2px 16px;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        min-width: 80px;
-        justify-content: center;
-        box-shadow: none;
-      }
-      @media (max-width: 768px) {
-        .service-extra-info {
-          flex-direction: column;
-          gap: 0;
-          padding: 12px 0 12px 0;
-        }
-        .service-stars {
-          margin-bottom: 10px;
-          justify-content: center;
-        }
-      } */
 
       /* Dynamic text visibility */
       h1,
