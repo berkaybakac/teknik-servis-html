@@ -224,7 +224,7 @@
       .section {
         padding: 50px 0;
         background-color: #000;
-        min-height: 50px; /* CLS için minimum yükseklik */
+        min-height: 600px; /* CLS için minimum yükseklik */
       }
 
       .section-title {
@@ -750,11 +750,13 @@
       @media (min-width: 600px) {
         .notfound-services-list-grid {
           grid-template-columns: repeat(2, 1fr);
+          min-height: 320px; /* ← Bu satır eklendi */
         }
       }
       @media (min-width: 900px) {
         .notfound-services-list-grid {
           grid-template-columns: repeat(3, 1fr);
+          min-height: 240px; /* ← Bu satır eklendi */
         }
       }
       .notfound-service-card {
