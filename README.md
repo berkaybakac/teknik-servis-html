@@ -1,57 +1,40 @@
-# Teknik Servis HTML Sitesi
+# Technical Service Website (HTML + CSS + JavaScript)
 
-Bu proje, statik HTML ile geliştirilmiş, hızlı yüklenen, mobil uyumlu ve sade yapıda bir **teknik servis web sitesidir**.  
-Garanti dışı cihazlar için kullanıcı bilgilendirme, arama yönlendirmesi ve KVKK uyumlu bilgilendirme sağlar.
+This project is a fast, responsive, and SEO-optimized landing website tailored for businesses offering technical repair and maintenance services. Built entirely with HTML, CSS, and vanilla JavaScript, it is lightweight, mobile-first, and deployable on any static hosting platform.
 
-## Amaç
+## Features
 
-- Garantisi bitmiş cihazlar için **basit ve hızlı bir tanıtım sitesi sunmak**
-- Mobil cihazlarda **<1 saniye açılış süresi** sağlamak
-- SEO ve gizlilik metinleri dahil olmak üzere tüm temel sayfaları barındırmak
+- Fully responsive layout for mobile, tablet, and desktop
+- 100/100 Google PageSpeed score (mobile and desktop)
+- Inline JavaScript for interactive UI elements
+- Minimalist and fast-loading HTML structure
+- Dynamic service pages with contextual navigation
+- Structured legal content: Privacy Policy, Terms (KVKK), Contact
+- Optimized for SEO with meta tags (OG / Twitter Cards)
+- Call-to-action buttons for mobile users
+- Compatible with Vercel and other static site hosts
 
-## Sayfa Yapısı
+## Pages
 
-- `/index.html` – Ana sayfa  
-- `/hizmet.html` – Hizmet detayları  
-- `/hakkimizda.html` – Firma hakkında bilgiler  
-- `/iletisim.html` – İletişim bilgileri  
-- `/gizlilik.html` – Gizlilik politikası  
-- `/kvkk.html` – KVKK metni
+- `/index.html` – Home
+- `/hizmet.html` – Services
+- `/iletisim.html` – Contact
+- `/hakkimizda.html` – About
+- `/gizlilik.html` – Privacy Policy
+- `/kvkk.html` – Terms (KVKK)
 
-## Canlı Site
+## Deployment
 
-Proje şu adreste yayınlanmıştır:  
-**https://teknik-servis-html.vercel.app**
+This site is fully static and does not require any backend.  
+Deployed via [Vercel](https://vercel.com/).
 
-## Özellikler
+Live: [https://teknik-servis-html.vercel.app](https://teknik-servis-html.vercel.app)
 
-- Statik HTML + CSS tabanlı
-- Mobil uyumlu tasarım (responsive)
-- Favicon desteği
-- Hızlı yüklenme (<1s mobilde)
-- Vercel üzerinden ücretsiz dağıtım
-- JavaScript veya framework kullanılmamıştır
+## Developer
 
-## Kullanım
+This project was developed during the compulsory summer internship (July–September 2025)  
+at **Eterna Teknoloji A.Ş.** by **Berkay Bakaç**,  
+a Computer Engineering student at Mersin University.
 
-Projeyi klonlayarak tarayıcınızda açabilirsiniz:
-
-```bash
-git clone https://github.com/berkaybakac/teknik-servis-html.git
-cd teknik-servis-html
-open index.html
-```
-
-## Geliştirici
-
-Bu proje, **Eterna Teknoloji A.Ş.** bünyesinde  
-**Mersin Üniversitesi Bilgisayar Mühendisliği Zorunlu Yaz Stajı (07.07.2025 – 01.09.2025)** kapsamında  
-**Berkay Bakaç** tarafından geliştirilmiştir.
-
-- GitHub → [@berkaybakac](https://github.com/berkaybakac)
-- LinkedIn → [linkedin.com/in/berkaybakac](https://linkedin.com/in/berkaybakac)
-
----
-
-> **Not:** Bu site yetkili servis değildir. Yalnızca garanti dışı cihazlara yöneliktir.
-
+- GitHub: [@berkaybakac](https://github.com/berkaybakac)  
+- LinkedIn: [linkedin.com/in/berkaybakac](https://linkedin.com/in/berkaybakac)
