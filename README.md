@@ -3,13 +3,13 @@
 Bu proje, statik HTML ile geliştirilmiş, hızlı yüklenen, mobil uyumlu ve sade yapıda bir **teknik servis web sitesidir**.  
 Garanti dışı cihazlar için kullanıcı bilgilendirme, arama yönlendirmesi ve KVKK uyumlu bilgilendirme sağlar.
 
-## 🔍 Amaç
+## Amaç
 
 - Garantisi bitmiş cihazlar için **basit ve hızlı bir tanıtım sitesi sunmak**
 - Mobil cihazlarda **<1 saniye açılış süresi** sağlamak
 - SEO ve gizlilik metinleri dahil olmak üzere tüm temel sayfaları barındırmak
 
-## 🧭 Sayfa Yapısı
+## Sayfa Yapısı
 
 - `/index.html` – Ana sayfa  
 - `/hizmet.html` – Hizmet detayları  
@@ -18,21 +18,21 @@ Garanti dışı cihazlar için kullanıcı bilgilendirme, arama yönlendirmesi v
 - `/gizlilik.html` – Gizlilik politikası  
 - `/kvkk.html` – KVKK metni
 
-## 🌐 Canlı Site
+## Canlı Site
 
 Proje şu adreste yayınlanmıştır:  
 **https://teknik-servis-html.vercel.app**
 
-## 📱 Özellikler
+## Özellikler
 
-- ✅ Statik HTML + CSS tabanlı
-- ✅ Mobil uyumlu tasarım (responsive)
-- ✅ Favicon desteği
-- ✅ Hızlı yüklenme (<1s mobilde)
-- ✅ Vercel üzerinden ücretsiz dağıtım
-- ❌ JavaScript veya framework kullanılmamıştır
+- Statik HTML + CSS tabanlı
+- Mobil uyumlu tasarım (responsive)
+- Favicon desteği
+- Hızlı yüklenme (<1s mobilde)
+- Vercel üzerinden ücretsiz dağıtım
+- JavaScript veya framework kullanılmamıştır
 
-## 🚀 Kullanım
+## Kullanım
 
 Projeyi klonlayarak tarayıcınızda açabilirsiniz:
 
@@ -42,7 +42,7 @@ cd teknik-servis-html
 open index.html
 ```
 
-## 🛠️ Geliştirici
+## Geliştirici
 
 Bu proje, **Eterna Teknoloji A.Ş.** bünyesinde  
 **Mersin Üniversitesi Bilgisayar Mühendisliği Zorunlu Yaz Stajı (07.07.2025 – 01.09.2025)** kapsamında  
