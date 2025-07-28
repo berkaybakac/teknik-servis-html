@@ -1,6 +1,6 @@
 # Technical Service Website (HTML + CSS + JavaScript)
 
-This project is a fast, responsive, and SEO-optimized landing website tailored for businesses offering technical repair and maintenance services. Built entirely with HTML, CSS, and vanilla JavaScript, it is lightweight, mobile-first, and deployable on any static hosting platform.
+This project is a fast, mobile-first, and SEO-optimized landing website built for businesses offering technical repair and maintenance services. It is developed using static HTML, CSS, and lightweight client-side JavaScript to support dynamic interactions such as query-based routing. The site is fully responsive, easy to deploy on any static hosting platform, and optimized for high performance.
 
 ## Features
 
